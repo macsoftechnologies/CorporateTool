@@ -42,7 +42,7 @@ export const ROUTES: RouteInfo[] = [
     }
     ]
   },
-  {
+  /* {
     path: '',
     title: 'Dashboards',
     icon: 'mdi mdi-gauge',
@@ -733,5 +733,5 @@ export const ROUTES: RouteInfo[] = [
         ]
       }
     ]
-  }
+  } */
 ];
