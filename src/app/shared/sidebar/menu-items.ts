@@ -13,6 +13,37 @@ export const ROUTES: RouteInfo[] = [
   },
   {
     path: '',
+    title: 'CorporateTool',
+    icon: 'mdi mdi-gauge',
+    class: 'has-arrow',
+    label: '',
+    labelClass: 'label label-rouded label-themecolor',
+    extralink: false,
+    submenu:[
+    {
+      path: '/corporateTool/manageCompany',
+      title: 'Manage Company',
+      icon: '',
+      class: '',
+      label: '',
+      labelClass: '',
+      extralink: false,
+      submenu: []
+    },
+    {
+      path: '/corporateTool/master',
+      title: 'Master',
+      icon: '',
+      class: '',
+      label: '',
+      labelClass: '',
+      extralink: false,
+      submenu: []
+    }
+    ]
+  },
+  {
+    path: '',
     title: 'Dashboards',
     icon: 'mdi mdi-gauge',
     class: 'has-arrow',

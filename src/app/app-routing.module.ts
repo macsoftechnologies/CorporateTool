@@ -10,7 +10,13 @@ export const routes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '/dashboard/dashboard1', pathMatch: 'full' },
+      { path: '', redirectTo: '/corporateTool/manageCompany', pathMatch: 'full' },
+
+      {
+        path:'corporateTool',
+        loadChildren: './corporate-tool/corporatetool.module#CorporateToolModule' 
+      },
+
       {
         path: 'dashboard',
         loadChildren: './dashboards/dashboard.module#DashboardModule'
