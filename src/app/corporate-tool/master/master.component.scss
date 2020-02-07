@@ -1,0 +1,29 @@
+/**** Tabs Styles ****/ 
+::ng-deep {
+    .nav-item .nav-link.active {
+        background-color: #1976d2 ;
+        color: #fff ;
+    }
+    .btn-outline-primary {
+        border: 1px solid #1976d2;
+        color: #1976d2;
+    }
+    .btn-outline-primary:hover {
+        background-color: #1976d2;
+    }
+    .btn-danger {
+        background-color: red;
+    }
+    @media (max-width:768px) {
+        .container-fluid {
+            padding: 0;
+            .tab-pane.active {
+                div {
+                    .card-body {
+                        padding: 1.25rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
