@@ -1,8 +1,18 @@
-.updatebutton{
-    background-color: #b02626;
-    color: #fff;
-    border: #b02626;
+::ng-deep {
+    .nav-item .nav-link.active {
+        background-color: #1976d2 ;
+        color: #fff ;
+    }
+    .btn-outline-primary {
+        border: 1px solid #1976d2;
+        color: #1976d2;
+    }
+    .btn-outline-primary:hover {
+        background-color: #1976d2;
+    }
+    
 }
+
 .image img{
     max-width: 100px;
     height: 100px;
@@ -25,19 +35,19 @@
 }
 
 .manage-form-footer button {
-    background-color: #b02626;
+    background-color: #b02626; 
     color: #fff;
     border: #b02626;
     padding: 7px 60px
     
 }
 .manage-form-footer button:hover {
-    background-color: #b02626;
+    background-color: blue !important;;
     color: #fff;
     border: #b02626;
 }
 .manage-form-footer button:active {
-    background-color: #b02626 !important;
+    background-color: blue !important;
 }
 @media (min-width: 200px) and (max-width: 768px) {
     .logowrap{
@@ -47,4 +57,5 @@
     ::ng-deep .container-fluid {
         padding: 0;
     } 
-}
+};
+
