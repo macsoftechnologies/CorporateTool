@@ -1,0 +1,50 @@
+.updatebutton{
+    background-color: #b02626;
+    color: #fff;
+    border: #b02626;
+}
+.image img{
+    max-width: 100px;
+    height: 100px;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px 2px #ebe4e4;
+    border: 1px solid #ccc7c7;
+    margin-bottom: 0.7rem;
+    
+}
+.manage-form-footer {
+    text-align: end;
+    padding: 15px;
+    border-top: 1px solid #e9e6e6;
+    
+}
+
+.manage-form-footer button {
+    background-color: #b02626;
+    color: #fff;
+    border: #b02626;
+    padding: 7px 60px
+    
+}
+.manage-form-footer button:hover {
+    background-color: #b02626;
+    color: #fff;
+    border: #b02626;
+}
+.manage-form-footer button:active {
+    background-color: #b02626 !important;
+}
+@media (min-width: 200px) and (max-width: 768px) {
+    .logowrap{
+        flex-wrap: wrap-reverse;
+    }
+
+    ::ng-deep .container-fluid {
+        padding: 0;
+    } 
+}

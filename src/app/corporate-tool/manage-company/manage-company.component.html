@@ -1,3 +1,356 @@
-<p>
-  manage-company works!
-</p>
+<div class="container">
+  <div class="col-md-12">
+    <div class="card">
+        <div class="card-body">
+            
+            <ngb-tabset>
+              <ngb-tab title="Manage Company">
+                <ng-template ngbTabContent>
+                  <div class="row">
+                    <div class="card col-lg-12">
+                      <div class="card-body">
+                        <form class="form p-t-20">
+                          <div class="row logowrap">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-file-image-o"></i>
+                                        </span>
+                                    </div>
+                                    <input type='file' (change)="onSelectFile($event)" class="form-control" id="uploaded" placeholder="No file Selected" aria-label="Username" aria-describedby="basic-a0ddon11" name="logo">
+                                    <!-- <input type="file" class="form-control" id="uploaded" placeholder="No file Selected" aria-label="Username" aria-describedby="basic-a0ddon11" name="logo"> -->
+                                </div>
+                              </div>
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="ti-user"></i>
+                                          </span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Name" aria-label="Username" aria-describedby="basic-addon11">
+                                  </div>
+                              </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-6 col-sm-12 justify-content-center mx-auto">
+                              <div class="form-group">
+                                  <div class="image">
+                                    <img [src]="url" id="uploaded_logo"> 
+                                  </div>
+                                </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Enter Your Address" aria-label="Username" aria-describedby="basic-addon11">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-address-card"></i>
+                                          </span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Address Line2" aria-label="Username" aria-describedby="basic-addon11">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-plane"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control" id="country" name="country">
+                                      <option>--select Country--</option>
+                                      <option>India</option>
+                                      <option>US</option>
+                                      <option>UK</option>
+                                      <option>DXB</option>
+                                      <option>China</option>
+                                      </select>
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-road"></i>
+                                          </span>
+                                      </div>
+                                      <select class="form-control" id="city" name="city">
+                                        <option>--select City--</option>
+                                        <option>Banglore</option>
+                                        <option>Newyork</option>
+                                        <option>London</option>
+                                        <option>Dubai</option>
+                                        <option>Shanghai</option>
+                                        </select>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon11">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                   <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-phone"></i>
+                                          </span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Contact No" aria-label="Username" aria-describedby="basic-addon11">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-envelope-o"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Username" aria-describedby="basic-addon11">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                  
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-file-text"></i>
+                                          </span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Text" aria-label="Username" aria-describedby="basic-addon11">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="manage-form-footer">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+
+                   
+                 
+                  
+                
+                </ng-template>
+              </ngb-tab>
+              <ngb-tab>
+                <ng-template ngbTabTitle><b>Manage Branch</b></ng-template>
+                <ng-template ngbTabContent>
+                  <div class="row">
+                    <div class="card col-lg-12">
+                      <div class="card-body">
+                        <form class="form p-t-20">
+                           <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-university"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Branch Name" aria-label="Username" aria-describedby="basic-addon11">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-envelope-o"></i>
+                                          </span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Username" aria-describedby="basic-addon11">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Branch Address" aria-label="Username" aria-describedby="basic-addon11">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-address-card"></i>
+                                          </span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Address Line2" aria-label="Username" aria-describedby="basic-addon11">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-plane"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control" id="country" name="country">
+                                      <option>--select Country--</option>
+                                      <option>India</option>
+                                      <option>US</option>
+                                      <option>UK</option>
+                                      <option>DXB</option>
+                                      <option>China</option>
+                                      </select>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                   <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-road"></i>
+                                          </span>
+                                      </div>
+                                      <select class="form-control" id="city" name="city">
+                                        <option>--select city--</option>
+                                        <option>Banglore</option>
+                                        <option>Newyork</option>
+                                        <option>London</option>
+                                        <option>Dubai</option>
+                                        <option>Shanghai</option>
+                                        </select>
+                                      </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-address-card"></i>
+                                        </span>
+                                    </div>
+                                    <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon11">
+                                </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-phone"></i>
+                                          </span>
+                                      </div>
+                                      <input type="text" class="form-control" placeholder="Contact No" aria-label="Username" aria-describedby="basic-addon11">
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                              <div class="form-group">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="basic-addon11">
+                                            <i class="fa fa-check-square-o"></i>
+                                        </span>
+                                    </div>
+                                    <select class="form-control" id="cost-center-decision" name="decisioncost">
+                                      <option>--Select--</option>
+                                      <option>Yes</option>
+                                      <option>No</option>
+                                      </select>
+                                    </div>
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12">
+                                <div class="form-group">
+                                  <div class="input-group mb-3">
+                                      <div class="input-group-prepend">
+                                          <span class="input-group-text" id="basic-addon11">
+                                              <i class="fa fa-plane"></i>
+                                          </span>
+                                      </div>
+                                      <select class="form-control" id="cost-center" name="cost-center" disabled>
+                                        <option>--select--</option>
+                                        <option>Newyork</option>
+                                        <option>London</option>
+                                        <option>Dubai</option>
+                                        <option>Shanghai</option>
+                                        </select>
+                                    </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="manage-form-footer">
+                            <button type="submit" class="btn">Create</button>
+                         </div>
+
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </ng-template>
+              </ngb-tab>
+              
+            </ngb-tabset>
+    </div>
+    </div>
+</div>
+</div>
