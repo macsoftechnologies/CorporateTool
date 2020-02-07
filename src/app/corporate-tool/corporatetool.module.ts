@@ -3,9 +3,11 @@ import { ManageCompanyComponent } from './manage-company/manage-company.componen
 import { corporateToolRoutes } from "./corporatetool.routing";
 import { RouterModule } from "@angular/router";
 import { MasterComponent } from './master/master.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({ imports: [
-    RouterModule.forChild(corporateToolRoutes)
+    RouterModule.forChild(corporateToolRoutes),
+    NgbModule
 ],
 declarations: [ManageCompanyComponent, MasterComponent]
 })
