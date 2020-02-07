@@ -10,6 +10,9 @@
     .btn-outline-primary:hover {
         background-color: #1976d2;
     }
+    .btn-outline-primary:active {
+        background-color: #1976d2;
+    }
     
 }
 
@@ -34,21 +37,21 @@
     
 }
 
-.manage-form-footer button {
-    background-color: #b02626; 
-    color: #fff;
-    border: #b02626;
-    padding: 7px 60px
+// .manage-form-footer button {
+//     background-color: #b02626; 
+//     color: #fff;
+//     border: #b02626;
+//     padding: 7px 60px
     
-}
-.manage-form-footer button:hover {
-    background-color: blue !important;;
-    color: #fff;
-    border: #b02626;
-}
-.manage-form-footer button:active {
-    background-color: blue !important;
-}
+// }
+// .manage-form-footer button:hover {
+//     background-color: blue !important;;
+//     color: #fff;
+//     border: #b02626;
+// }
+// .manage-form-footer button:active {
+//     background-color: blue !important;
+// }
 @media (min-width: 200px) and (max-width: 768px) {
     .logowrap{
         flex-wrap: wrap-reverse;
