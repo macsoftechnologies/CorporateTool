@@ -1,4 +1,10 @@
-/**** Tabs Styles ****/ 
+.manage-form-footer {
+    text-align: end;
+    padding: 15px;
+    border-top: 1px solid #e9e6e6;
+    
+}
+
 ::ng-deep {
     .nav-item .nav-link.active {
         background-color: #1976d2 ;
@@ -11,11 +17,8 @@
     .btn-outline-primary:hover {
         background-color: #1976d2;
     }
-    .btn-danger {
-        background-color: red;
-    }
-    .input-group > .form-control:not(:first-child) {
-        font-size:14px;
+    .btn-outline-primary:active {
+        background-color: #1976d2;
     }
     @media (max-width:768px) {
         .container-fluid {
@@ -29,4 +32,5 @@
             }
         }
     }
+    
 }
