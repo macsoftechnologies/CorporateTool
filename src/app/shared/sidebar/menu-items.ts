@@ -39,6 +39,16 @@ export const ROUTES: RouteInfo[] = [
       labelClass: '',
       extralink: false,
       submenu: []
+    },
+    {
+      path: '/corporateTool/manageEmployees',
+      title: 'Manage Employees',
+      icon: '',
+      class: '',
+      label: '',
+      labelClass: '',
+      extralink: false,
+      submenu: []
     }
     ]
   },

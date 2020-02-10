@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 import { ManageCompanyComponent } from './manage-company/manage-company.component';
 import { MasterComponent } from './master/master.component';
+import { ManageEmployeesComponent } from './manage-employees/manage-employees.component';
 
 export const corporateToolRoutes: Routes = [
     {
@@ -11,10 +12,6 @@ export const corporateToolRoutes: Routes = [
             component: ManageCompanyComponent,
             data: {
               title: 'Manage Company',
-             /*  urls: [
-                { title: 'manageCompaany', url: '/dashboard' },
-                { title: 'Modern Dashboard' }
-              ] */
             }
           },
           {
@@ -28,6 +25,13 @@ export const corporateToolRoutes: Routes = [
               ] */
             }
           },
+          {
+            path: 'manageEmployees',
+            component: ManageEmployeesComponent,
+            data: {
+              title: 'Manage Employees',
+            }
+          }
         ]
         }
 ];
