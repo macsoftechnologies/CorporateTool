@@ -1,6 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '~perfect-scrollbar/css/perfect-scrollbar.css';
+/* @import '~bootstrap/dist/css/bootstrap.min.css'; */
+@import '~bs-stepper/dist/css/bs-stepper.min.css';
 
 .ps .ps__scrollbar-y-rail {
   left: 3px;
