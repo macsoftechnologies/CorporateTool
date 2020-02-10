@@ -1,0 +1,95 @@
+.manage-form-footer {
+    text-align: end;
+    padding: 15px;
+    border-top: 1px solid #e9e6e6;
+    
+}
+
+::ng-deep {
+    .nav-item .nav-link.active {
+        background-color: #1976d2 ;
+        color: #fff ;
+    }
+    .btn-outline-primary {
+        border: 1px solid #1976d2;
+        color: #1976d2;
+    }
+    .btn-outline-primary:hover {
+        background-color: #1976d2;
+    }
+    .btn-outline-primary:active {
+        background-color: #1976d2;
+    }
+    @media (max-width:768px) {
+        .container-fluid {
+            padding: 0;
+            .tab-pane.active {
+                div {
+                    .card-body {
+                        padding: 1.25rem 0;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+::ng-deep {
+    // .bs-stepper-circle  {
+    //     background-color: transparent;
+    //     color: #6c757d;
+    //     width: 6em;
+    // }
+    // .active .bs-stepper-circle {
+    //     background-color: transparent !important;
+    //     color: #1976d2;
+    //     width: 6em;
+    // }
+.bs-stepper .step-trigger {
+    padding: 20px 0;
+}
+    .bs-stepper-content {
+        form {
+            .dstepper-block {
+                padding: 10px;
+            }
+        }
+    }
+    .bs-stepper-header {
+        flex-wrap: wrap;
+    }
+    .bs-stepper-content form .dstepper-block {
+        padding: 0;
+    }
+    @media (max-width:768px) {
+        h4 {
+            font-size: 13px;
+            margin-top: 5px ;
+        }
+        .line {
+            display: none;
+        }
+        .bs-stepper-header > div {
+            width: 50%;
+        }
+        .bs-stepper-header {
+            .step {
+                span {
+                    font-size: 12px;
+                }
+            }
+        }
+        .bs-stepper .step-trigger {
+            padding: 10px 0;
+        }
+        .bs-stepper-content form .dstepper-block {
+            padding: 10px;
+        }
+        // input[type=text] {
+        //     font-size: 12px;
+        // }
+        .form-control {
+            font-size: 12px;
+        }
+    }
+}
