@@ -40,34 +40,10 @@
     
 }
 
-// .manage-form-footer button {
-//     background-color: #b02626; 
-//     color: #fff;
-//     border: #b02626;
-//     padding: 7px 60px
-    
-// }
-// .manage-form-footer button:hover {
-//     background-color: blue !important;;
-//     color: #fff;
-//     border: #b02626;
-// }
-// .manage-form-footer button:active {
-//     background-color: blue !important;
-// }
 @media (min-width: 200px) and (max-width: 768px) {
     .logowrap{
         flex-wrap: wrap-reverse;
     }
-
-    ::ng-deep{
-        .nav-item {
-            width: 50%;
-        }
-        .container-fluid {
-            padding: 0;
-        } 
-    } 
     .container {
         div {
             .card-body {
@@ -91,6 +67,14 @@
         button {
             font-size: 12px;
         }
+    }
+    ::ng-deep{
+        .nav-item {
+            width: 50%;
+        }
+        .container-fluid {
+            padding: 0;
+        } 
     }
 };
 

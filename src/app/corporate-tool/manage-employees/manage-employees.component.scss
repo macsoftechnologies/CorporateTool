@@ -7,7 +7,6 @@
 .employment-btns {
     text-align: end;
 }
-
 ::ng-deep {
     .text-primary {
         color: #1976d2 !important;
@@ -32,35 +31,9 @@
     .pagination {
         justify-content: center;
     }
-    @media (max-width:768px) {
-        .container-fluid {
-            padding: 0;
-            .tab-pane.active {
-                div {
-                    .card-body {
-                        padding: 1.25rem 0;
-                    }
-                }
-            }
-        }
+    .bs-stepper .step-trigger {
+        padding: 20px 0;
     }
-    
-    
-}
-::ng-deep {
-    // .bs-stepper-circle  {
-    //     background-color: transparent;
-    //     color: #6c757d;
-    //     width: 6em;
-    // }
-    // .active .bs-stepper-circle {
-    //     background-color: transparent !important;
-    //     color: #1976d2;
-    //     width: 6em;
-    // }
-.bs-stepper .step-trigger {
-    padding: 20px 0;
-}
     .bs-stepper-content {
         form {
             .dstepper-block {
@@ -76,6 +49,16 @@
     }
     
     @media (max-width:768px) {
+        .container-fluid {
+            padding: 0;
+            .tab-pane.active {
+                div {
+                    .card-body {
+                        padding: 1.25rem 0;
+                    }
+                }
+            }
+        }
         h4 {
             font-size: 13px;
             margin-top: 5px ;
@@ -99,9 +82,7 @@
         .bs-stepper-content form .dstepper-block {
             padding: 10px;
         }
-        // input[type=text] {
-        //     font-size: 12px;
-        // }
+        
         .form-control {
             font-size: 12px;
         }
