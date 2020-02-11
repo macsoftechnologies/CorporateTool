@@ -33,6 +33,7 @@
         }
     }
     
+    
 }
 ::ng-deep {
     // .bs-stepper-circle  {
@@ -61,6 +62,7 @@
     .bs-stepper-content form .dstepper-block {
         padding: 0;
     }
+    
     @media (max-width:768px) {
         h4 {
             font-size: 13px;
@@ -91,5 +93,12 @@
         .form-control {
             font-size: 12px;
         }
+    }
+    .PassportDetailsalert{
+        background-color: ivory;
+        color: black;
+        text-size-adjust: 10px;
+        border-left: 3px solid blue;
+        
     }
 }
