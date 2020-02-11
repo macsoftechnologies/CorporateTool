@@ -949,7 +949,7 @@
               <button (click)="next()" class="btn btn-outline-primary mt-2" type="button">Next</button>
             </div>
         </div>
-        <div id="test-l-3" class="content text-center">
+        <div id="test-l-3" class="content">
           <h4 class="text-primary mt-3">Employment Information</h4><hr>
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
@@ -1237,8 +1237,10 @@
                </div>
              </div>
             </div>
-          <button (click)="previous()" class="btn btn-outline-primary mr-2 mt-2" type="button">Previous</button>
-          <button (click)="next()" class="btn btn-outline-primary mt-2" type="button">Next</button>
+          <div class="employment-btns">
+            <button (click)="previous()" class="btn btn-outline-primary mr-2 mt-2" type="button">Previous</button>
+            <button (click)="next()" class="btn btn-outline-primary mt-2" type="button">Next</button>
+          </div>
         </div>
         <div id="test-l-5" class="content">
           <h4 class="text-primary mt-3">Flight Loyalty Cards</h4><hr>

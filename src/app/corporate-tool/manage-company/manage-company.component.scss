@@ -13,6 +13,9 @@
     .btn-outline-primary:active {
         background-color: #1976d2;
     }
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
+        background-color: #1976d2;
+    }
     
 }
 
@@ -57,8 +60,37 @@
         flex-wrap: wrap-reverse;
     }
 
-    ::ng-deep .container-fluid {
-        padding: 0;
+    ::ng-deep{
+        .nav-item {
+            width: 50%;
+        }
+        .container-fluid {
+            padding: 0;
+        } 
     } 
+    .container {
+        div {
+            .card-body {
+                padding: 1.25rem 5px 0;
+            }
+        }
+    }
+    .card-body {
+        font-size: 12px;
+        // padding: 1.25rem 0 ;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .responsive-padding {
+        padding: 0;
+    }
+    
+    .manage-form-footer {
+        padding: 15px ;
+        button {
+            font-size: 12px;
+        }
+    }
 };
 

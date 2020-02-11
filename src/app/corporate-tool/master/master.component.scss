@@ -17,7 +17,34 @@
     .input-group > .form-control:not(:first-child) {
         font-size:14px;
     }
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
+        background-color: #1976d2;
+        border-color: #1976d2;
+    }
+    .employment-btns {
+        text-align: end;
+        
+    }
+    
     @media (max-width:768px) {
+        .card-body {
+            font-size: 12px;
+        }
+        .form-control {
+            font-size: 12px !important;
+        }
+        
+        .responsive-padding {
+            padding: 0;
+        }
+        .employment-btns {
+            button {
+                font-size: 12px;
+            }
+        }
+        .responsive-padding-body {
+            padding: 1.25rem 5px 0;
+        }
         .container-fluid {
             padding: 0;
             .tab-pane.active {

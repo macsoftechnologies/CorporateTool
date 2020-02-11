@@ -7,7 +7,11 @@
 .employment-btns {
     text-align: end;
 }
+
 ::ng-deep {
+    .text-primary {
+        color: #1976d2 !important;
+    }
     .nav-item .nav-link.active {
         background-color: #1976d2 ;
         color: #fff ;
@@ -106,10 +110,10 @@
         }
     }
     .PassportDetailsalert{
-        background-color: ivory;
+        background-color: #f7fafe;
         color: black;
         text-size-adjust: 10px;
-        border-left: 3px solid blue;
+        border-left: 3px solid #1976d2;
         
     }
 }
