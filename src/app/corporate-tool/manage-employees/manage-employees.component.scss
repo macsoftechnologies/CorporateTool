@@ -29,6 +29,9 @@
     .btn-outline-primary:not(:disabled):not(.disabled):active {
         background-color: #1976d2;
     }
+    .pagination {
+        justify-content: center;
+    }
     @media (max-width:768px) {
         .container-fluid {
             padding: 0;
@@ -102,11 +105,16 @@
         .form-control {
             font-size: 12px;
         }
+        .card {
+            padding: 10px;
+        }
+
         /**** Employment Info ****/ 
         .employment-btns {
             button {
                 font-size: 12px;
             }
+            
         }
     }
     .PassportDetailsalert{

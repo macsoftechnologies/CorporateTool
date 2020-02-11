@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import Stepper from 'bs-stepper';
+import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
 
 
 @Component({
@@ -8,6 +9,11 @@ import Stepper from 'bs-stepper';
   styleUrls: ['./manage-employees.component.scss']
 })
 export class ManageEmployeesComponent implements OnInit {
+  page = 4;
+  page2 = 1;
+  currentPage = 3;
+  disablepage = 3;
+  isDisabled = true;
 
   constructor() { }
   loyaltycarddetails=[];

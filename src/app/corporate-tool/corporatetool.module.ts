@@ -6,8 +6,8 @@ import { MasterComponent } from './master/master.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ManageEmployeesComponent } from './manage-employees/manage-employees.component';
 import { FormsModule } from '@angular/forms';
-// import { BrowserModule  } from '@angular/platform-browser';
 import { CommonModule  } from '@angular/common';
+
 
 
 
@@ -15,8 +15,7 @@ import { CommonModule  } from '@angular/common';
     RouterModule.forChild(corporateToolRoutes),
     NgbModule,
     FormsModule,
-    // BrowserModule,
-    CommonModule
+    CommonModule,
 ],
 declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent]
 })
