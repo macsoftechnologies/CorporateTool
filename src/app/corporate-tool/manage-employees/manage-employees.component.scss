@@ -48,6 +48,7 @@
         padding: 0;
     }
     
+    
     @media (max-width:768px) {
         .container-fluid {
             padding: 0;
@@ -97,6 +98,18 @@
             }
             
         }
+        
+        .table thead th {
+          vertical-align: top;
+        }
+        
+    }
+    @media (max-width:528px) {
+        .loyaltycarddetails button{
+            margin-top: 5px;
+        }
+        .table th, .table td {
+            padding: 0px;
     }
     .PassportDetailsalert{
         background-color: #f7fafe;
@@ -105,4 +118,5 @@
         border-left: 3px solid #1976d2;
         
     }
+}
 }

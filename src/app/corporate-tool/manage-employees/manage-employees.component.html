@@ -1244,7 +1244,7 @@
         </div>
         <div id="test-l-5" class="content">
           <h4 class="text-primary mt-3">Flight Loyalty Cards</h4><hr>
-          
+          <form [formGroup]="flightloyaltycards" (ngSubmit)="onsubmit()">
           <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="form-group">
@@ -1256,9 +1256,9 @@
                         </span>
                     </div>
                     <!-- <input type="text" class="form-control" [(ngModel)]="airline" placeholder="Airline" aria-label="Username" aria-describedby="basic-addon11"> -->
-                    <select class="form-control" [(ngModel)]="airline" id="city" name="city" placeholder="Select Airline">
+                    <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
                       <!-- <option>----Select Airline---</option>   -->
-                      <option *ngFor="let item of selectairline" [ngValue]="airline" >{{item.name}}</option>
+                      <option *ngFor="let item of selectairline" (value)="item.name" >{{item.name}}</option>
                       
                     </select>                 
                   </div>
@@ -1273,20 +1273,22 @@
                               <i class="fa fa-phone"></i>
                           </span>
                       </div>
-                      <input type="number" class="form-control" [(ngModel)]="cardnumber" placeholder="Card Number" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="number" class="form-control" formControlName="cardnumber" placeholder="Card Number" aria-label="Username" aria-describedby="basic-addon11">
                     </div>
               </div>
             </div>
           </div>
           <!-- <button type="submit" class="btn btn-outline-primary mt-2" (click)="submit()">Submit</button> -->
-          <input type="submit"  class="btn btn-outline-primary mt-2" (click)="submit()">
+          <input type="submit"  class="btn btn-outline-primary mt-2" value="Submit">
+        </form>
           <h4 class="text-primary mt-3">Loyalty Card Details</h4><hr>
-          <table class="table table-stripped text-danger">
+          <div class="table-responsive">
+          <table class="table table-stripped loyaltycarddetails">
             <thead>
-              <tr class="font-weight-bold">
-                <td>Airline</td>
-                <td>Card No</td>
-                <td>Action</td>
+              <tr class="font-weight-bold text-danger">
+                <th>Airline</th>
+                <th>Card No</th>
+                <th>Action</th>
               </tr>
             </thead>
             <tbody>
@@ -1294,21 +1296,22 @@
                <td>{{items.airline}}</td>
                <td>{{items.cardnumber}}</td>
                <td>
-                 <button>Enable</button>
-                 <button>Disable</button>
-                 <button>Delete</button>
-                </td>
+                 <button class="btn btn-outline-primary mr-1"><i class="fa fa-check"></i></button>
+                 <button class="btn btn-outline-primary mr-1"><i class="fa fa-times"></i></button>
+                 <button class="btn btn-outline-primary mr-1"><i class="fa fa-trash-o"></i></button>
+              </td>
               </tr>
             </tbody>
            </table>
+          </div>
            <div class="col-md-12">
             <div class="">
-                <div class="card-body">
+                <div class="card-body"> 
                   <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
                 </div>
             </div>
         </div>
-        </div>
+        
         
       <!-- </form> -->
     </div>
