@@ -1,5 +1,5 @@
 <h3 class="text-center">
-  <i class="ti-user"></i><b>New Profile</b></h3>
+  <i class="ti-user mr-2"></i><b>New Profile</b></h3>
 <div class="container d-none">
   <div class="col-md-12">
     <div class="card">
@@ -1279,7 +1279,7 @@
             </div>
           </div>
           <!-- <button type="submit" class="btn btn-outline-primary mt-2" (click)="submit()">Submit</button> -->
-          <input type="submit"  class="btn btn-outline-primary mt-2" value="Submit">
+          <div class="submit-btn"><input type="submit"  class="btn btn-outline-primary mt-2" value="Submit"></div>
         </form>
           <h4 class="text-primary mt-3">Loyalty Card Details</h4><hr>
           <div class="table-responsive">
@@ -1295,10 +1295,10 @@
               <tr *ngFor="let items of loyaltycarddetails" >
                <td>{{items.airline}}</td>
                <td>{{items.cardnumber}}</td>
-               <td>
-                 <button class="btn btn-outline-primary mr-1"><i class="fa fa-check"></i></button>
-                 <button class="btn btn-outline-primary mr-1"><i class="fa fa-times"></i></button>
-                 <button class="btn btn-outline-primary mr-1"><i class="fa fa-trash-o"></i></button>
+               <td class="edit-btns">
+                 <a href="#" ngbTooltip="Enable" class=" mr-2"><i class="fa fa-check"></i></a>
+                 <a href="#" ngbTooltip="Disable" class=" mr-2"><i class="fa fa-times"></i></a>
+                 <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
               </td>
               </tr>
             </tbody>

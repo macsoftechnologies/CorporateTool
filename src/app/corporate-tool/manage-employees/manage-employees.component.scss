@@ -7,6 +7,20 @@
 .employment-btns {
     text-align: end;
 }
+.submit-btn {
+    text-align: end;
+}
+.edit-btns a {
+    &:nth-child(1)  i {
+        color: rgb(64, 202, 64);
+    }
+    &:nth-child(2)  i {
+        color: #1976d2;
+    }
+    &:nth-child(3)  i {
+        color: rgb(209, 49, 49);
+    }
+}
 ::ng-deep {
     .text-primary {
         color: #1976d2 !important;
@@ -101,6 +115,14 @@
         
         .table thead th {
           vertical-align: top;
+        }
+        .submit-btn {
+            input {
+                font-size: 12px;
+            }
+        }
+        .loyaltycarddetails {
+            font-size: 12px;
         }
         
     }
