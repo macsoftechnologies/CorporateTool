@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import Stepper from 'bs-stepper';
 import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 
 @Component({
@@ -14,11 +15,10 @@ export class ManageEmployeesComponent implements OnInit {
   currentPage = 3;
   disablepage = 3;
   isDisabled = true;
-
-  constructor() { }
   loyaltycarddetails=[];
   airline="";
   cardnumber:number;
+  loyaltycardobject={};
   selectairline=[
     {id:1,name:"Selected Airline"},
     {id:2,name:"visakhaptnam"},
@@ -27,11 +27,27 @@ export class ManageEmployeesComponent implements OnInit {
     {id:4,name:"uk"},
     
   ]
-  submit(){
-    this.loyaltycarddetails.push({airline:this.airline,cardnumber:this.cardnumber})
-    this.airline=null;
-    this.cardnumber=null;
-    console.log(this.loyaltycarddetails)
+
+  flightloyaltycards= new FormGroup({
+    airline: new FormControl(this.selectairline[0].name,Validators.required),
+    cardnumber:new FormControl("",Validators.required)
+  })
+
+  constructor() { }
+  suresh(){
+    console.log('working')
+  }
+  
+  
+  onsubmit(){
+    this.loyaltycardobject=this.flightloyaltycards.value;
+    this.loyaltycarddetails.push(this.loyaltycardobject);
+    this.flightloyaltycards.patchValue({
+      airline:this.selectairline[0].name,
+      cardnumber:null,
+    })
+    
+    
   }
 
   name = 'Angular';

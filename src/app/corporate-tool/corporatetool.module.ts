@@ -5,7 +5,7 @@ import { RouterModule } from "@angular/router";
 import { MasterComponent } from './master/master.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ManageEmployeesComponent } from './manage-employees/manage-employees.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CommonModule  } from '@angular/common';
 
 
@@ -16,6 +16,7 @@ import { CommonModule  } from '@angular/common';
     NgbModule,
     FormsModule,
     CommonModule,
+    ReactiveFormsModule
 ],
 declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent]
 })
