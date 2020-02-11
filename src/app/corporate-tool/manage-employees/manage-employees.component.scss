@@ -4,7 +4,9 @@
     border-top: 1px solid #e9e6e6;
     
 }
-
+.employment-btns {
+    text-align: end;
+}
 ::ng-deep {
     .nav-item .nav-link.active {
         background-color: #1976d2 ;
@@ -18,6 +20,9 @@
         background-color: #1976d2;
     }
     .btn-outline-primary:active {
+        background-color: #1976d2;
+    }
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
         background-color: #1976d2;
     }
     @media (max-width:768px) {
@@ -90,6 +95,12 @@
         // }
         .form-control {
             font-size: 12px;
+        }
+        /**** Employment Info ****/ 
+        .employment-btns {
+            button {
+                font-size: 12px;
+            }
         }
     }
 }
