@@ -49,6 +49,26 @@ export const ROUTES: RouteInfo[] = [
       labelClass: '',
       extralink: false,
       submenu: []
+    },
+    {
+      path: '/corporateTool/adminpermissions',
+      title: 'Admin',
+      icon: '',
+      class: '',
+      label: '',
+      labelClass: '',
+      extralink: false,
+      submenu: []
+    },
+    {
+      path: '/corporateTool/travelpolicy-a',
+      title: 'Policy A',
+      icon: '',
+      class: '',
+      label: '',
+      labelClass: '',
+      extralink: false,
+      submenu: []
     }
     ]
   },

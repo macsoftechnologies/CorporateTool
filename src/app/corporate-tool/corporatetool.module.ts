@@ -7,6 +7,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ManageEmployeesComponent } from './manage-employees/manage-employees.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 import { CommonModule  } from '@angular/common';
+import { PermissionsComponent } from './permissions/permissions.component';
+import { AdminpermissionsComponent } from './adminpermissions/adminpermissions.component';
+import { TravelpolicyAComponent } from './travelpolicy-a/travelpolicy-a.component';
 
 
 
@@ -18,7 +21,7 @@ import { CommonModule  } from '@angular/common';
     CommonModule,
     ReactiveFormsModule
 ],
-declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent]
+declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent]
 })
 
 export class CorporateToolModule {

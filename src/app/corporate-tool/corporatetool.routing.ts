@@ -2,6 +2,8 @@ import { Routes } from '@angular/router';
 import { ManageCompanyComponent } from './manage-company/manage-company.component';
 import { MasterComponent } from './master/master.component';
 import { ManageEmployeesComponent } from './manage-employees/manage-employees.component';
+import { AdminpermissionsComponent } from './adminpermissions/adminpermissions.component';
+import { TravelpolicyAComponent } from './travelpolicy-a/travelpolicy-a.component';
 
 export const corporateToolRoutes: Routes = [
     {
@@ -30,6 +32,20 @@ export const corporateToolRoutes: Routes = [
             component: ManageEmployeesComponent,
             data: {
               title: 'Manage Employees',
+            }
+          },
+          {
+            path: 'adminpermissions',
+            component: AdminpermissionsComponent,
+            data: {
+              title: 'Admin',
+            }
+          },
+          {
+            path: 'travelpolicy-a',
+            component: TravelpolicyAComponent,
+            data: {
+              title: 'Policy A',
             }
           }
         ]
