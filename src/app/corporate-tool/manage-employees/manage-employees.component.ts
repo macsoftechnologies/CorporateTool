@@ -46,14 +46,16 @@ export class ManageEmployeesComponent implements OnInit {
       airline:this.selectairline[0].name,
       cardnumber:null,
     })
-    
-    
-  }
+    }
+  delete(p){
+    let index = this.loyaltycarddetails.indexOf(p);
+    this.loyaltycarddetails.splice(index, 1);
+   }
 
   name = 'Angular';
   private stepper: Stepper;
 
-  previous(){
+  previous(){ 
     this.stepper.previous();
   }
 

@@ -1,0 +1,80 @@
+
+.flightcustomselect{
+    display: flex;
+    align-items: baseline;
+    .custom-select{
+        max-width:8%;
+        font-size: 13px;
+        margin-top: 10px;
+        margin-right: 5px;
+     }
+    .Econamy{
+        width: 25%;
+    }
+}
+.customselect{
+    display: flex;
+    align-items: baseline;
+ .custom-select{
+   max-width: 14%;
+   font-size: 13px;
+   margin-top: 10px;
+   margin-right: 5px;}
+   .Econamy{
+    width: 10%;
+}
+   
+}
+
+
+.card{
+    font-size: 13px;
+    color: black;
+    font-weight: 450;
+}
+@media (max-width:768px) {
+    .container{
+        padding: 0px;
+    }
+    ::ng-deep {
+
+    .container-fluid {
+        padding:0px;
+    }
+    .customselect[_ngcontent-c2] .custom-select[_ngcontent-c2] {
+        max-width: 36%;}
+}
+
+    
+    .card{
+        font-size: 8px;
+    }
+    .customselect{
+        display: flex;
+        align-items: baseline;
+     .custom-select{
+        
+       font-size: 11px;
+    
+}
+       .Econamy{
+        max-width: 10%;
+    }
+       
+    }
+    .flightcustomselect{
+        display: flex;
+        align-items: baseline;
+        .custom-select{
+            max-width:23%;
+            font-size: 10px;
+            margin-top: 10px;
+            
+         }
+        .Econamy{
+            width: 50%;
+        }
+    }
+    
+}
+    

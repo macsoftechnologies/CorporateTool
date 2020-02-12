@@ -1292,13 +1292,13 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let items of loyaltycarddetails" >
+              <tr *ngFor="let items of loyaltycarddetails">
                <td>{{items.airline}}</td>
                <td>{{items.cardnumber}}</td>
                <td class="edit-btns">
                  <a href="#" ngbTooltip="Enable" class=" mr-2"><i class="fa fa-check"></i></a>
                  <a href="#" ngbTooltip="Disable" class=" mr-2"><i class="fa fa-times"></i></a>
-                 <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                 <a ngbTooltip="Delete" (click)="delete(items)" class=" mr-2"><i class="fa fa-trash-o"></i></a>
               </td>
               </tr>
             </tbody>
