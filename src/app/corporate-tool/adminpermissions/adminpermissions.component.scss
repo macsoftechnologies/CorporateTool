@@ -5,21 +5,15 @@
    max-width: 100%;
    .input-group-text {
     background-color: white;
-}
-   
+}  
 }
 input-group-prepend, .input-group-append {
     display: block;
     width: 283px;
-    
-    
-}
-
-
-   
-input.larger { 
-    transform: scale(1.5); 
-    margin: 1px;
+}   
+    input.larger { 
+    transform: scale(1.8); 
+    margin: 5px;
     } 
     .form-check-input {
         top :5px;
@@ -29,4 +23,13 @@ input.larger {
         padding:5px;
       margin-bottom:5px;
       outline: none;
+    }
+    .input-feild-checkbox  {
+        border-radius: 5px;
+        border: 1px solid #b6b6b6;
+        div {
+            label {
+                margin: 5px;
+            }
+        }
     }
