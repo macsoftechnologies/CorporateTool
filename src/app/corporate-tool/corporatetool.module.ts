@@ -10,6 +10,19 @@ import { CommonModule  } from '@angular/common';
 import { PermissionsComponent } from './permissions/permissions.component';
 import { AdminpermissionsComponent } from './adminpermissions/adminpermissions.component';
 import { TravelpolicyAComponent } from './travelpolicy-a/travelpolicy-a.component';
+import { ManagePersonalDetailsComponent } from './manage-personal-details/manage-personal-details.component';
+import { ManagePreferencesComponent } from './manage-preferences/manage-preferences.component';
+import { ManageEmploymentComponent } from './manage-employment/manage-employment.component';
+import { ManagePassportDetailsComponent } from './manage-passport-details/manage-passport-details.component';
+import { ManageLoyaltyMembershipsComponent } from './manage-loyalty-memberships/manage-loyalty-memberships.component';
+import { TravelPolicyComponent } from './travel-policy/travel-policy.component';
+import { ManageCompanySubComponent } from './manage-company-sub/manage-company-sub.component';
+import { ManageBranchComponent } from './manage-branch/manage-branch.component';
+import { MasterManageDepartmentComponent } from './master-manage-department/master-manage-department.component';
+import { MasterManageGradesComponent } from './master-manage-grades/master-manage-grades.component';
+import { MasterManageDesignationsComponent } from './master-manage-designations/master-manage-designations.component';
+import { MasterManageTeamsComponent } from './master-manage-teams/master-manage-teams.component';
+import { MasterManageBandsComponent } from './master-manage-bands/master-manage-bands.component';
 
 
 
@@ -21,7 +34,7 @@ import { TravelpolicyAComponent } from './travelpolicy-a/travelpolicy-a.componen
     CommonModule,
     ReactiveFormsModule
 ],
-declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent]
+declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent, ManagePersonalDetailsComponent, ManagePreferencesComponent, ManageEmploymentComponent, ManagePassportDetailsComponent, ManageLoyaltyMembershipsComponent, TravelPolicyComponent, ManageCompanySubComponent, ManageBranchComponent, MasterManageDepartmentComponent, MasterManageGradesComponent, MasterManageDesignationsComponent, MasterManageTeamsComponent, MasterManageBandsComponent]
 })
 
 export class CorporateToolModule {

@@ -1,0 +1,75 @@
+<div class="card body-padding">
+  <div id="test-l-5" class="content">
+    <h4 class="text-primary mt-3">Flight Loyalty Cards</h4><hr>
+    <form [formGroup]="flightloyaltycards" (ngSubmit)="onsubmit()">
+    <div class="row">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="form-group">
+          <!-- <label>Airline</label> -->
+          <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                  <span class="input-group-text" id="basic-addon11">
+                      <i class="fa fa-address-card"></i>
+                  </span>
+              </div>
+              <!-- <input type="text" class="form-control" [(ngModel)]="airline" placeholder="Airline" aria-label="Username" aria-describedby="basic-addon11"> -->
+              <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
+                <!-- <option>----Select Airline---</option>   -->
+                <option *ngFor="let item of selectairline" (value)="item.name" >{{item.name}}</option>
+                
+              </select>                 
+            </div>
+      </div>
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12">
+          <div class="form-group">
+          <!-- <label>Card Number</label> -->
+          <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="basic-addon11">
+                        <i class="fa fa-phone"></i>
+                    </span>
+                </div>
+                <input type="number" class="form-control" formControlName="cardnumber" placeholder="Card Number" aria-label="Username" aria-describedby="basic-addon11">
+              </div>
+        </div>
+      </div>
+    </div>
+    <!-- <button type="submit" class="btn btn-outline-primary mt-2" (click)="submit()">Submit</button> -->
+    <div class="employment-btns"><input type="submit"  class="btn btn-outline-primary mt-2" value="Submit"></div>
+  </form>
+    <h4 class="text-primary mt-3">Loyalty Card Details</h4><hr>
+    <div class="table-responsive">
+    <table class="table table-stripped loyaltycarddetails">
+      <thead>
+        <tr class="font-weight-bold text-danger">
+          <th>Airline</th>
+          <th>Card No</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let items of loyaltycarddetails" >
+         <td>{{items.airline}}</td>
+         <td>{{items.cardnumber}}</td>
+         <td class="edit-btns">
+           <a href="#" ngbTooltip="Enable" class=" mr-2"><i class="fa fa-check"></i></a>
+           <a href="#" ngbTooltip="Disable" class=" mr-2"><i class="fa fa-times"></i></a>
+           <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+        </td>
+        </tr>
+      </tbody>
+     </table>
+    </div>
+     <div class="col-md-12">
+      <div class="">
+          <div class="card-body"> 
+            <ngb-pagination [collectionSize]="70" [(page)]="page" aria-label="Default pagination"></ngb-pagination>
+          </div>
+      </div>
+  </div>
+  
+  
+  <!-- </form> -->
+  </div>
+</div>

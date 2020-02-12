@@ -1,0 +1,168 @@
+.body-padding {
+    padding: 15px;
+    .employment-btns {
+        text-align: end;
+    }
+}
+
+@media (max-width:768px) {
+    ::ng-deep {
+        .container-fluid {
+            padding: 0 15px 25px;
+        }
+    }
+    h4 {
+        font-size: 13px;
+        margin-top: 5px ;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .employment-btns {
+        button {
+            font-size: 12px;
+        }
+        
+    }
+}
+// .manage-form-footer {
+//     text-align: end;
+//     padding: 15px;
+//     border-top: 1px solid #e9e6e6;
+// }
+
+// .submit-btn {
+//     text-align: end;
+// }
+// .edit-btns a {
+//     &:nth-child(1)  i {
+//         color: rgb(64, 202, 64);
+//     }
+//     &:nth-child(2)  i {
+//         color: #1976d2;
+//     }
+//     &:nth-child(3)  i {
+//         color: rgb(209, 49, 49);
+//     }
+// }
+// ::ng-deep {
+    // .text-primary {
+    //     color: #1976d2 !important;
+    // }
+    // .nav-item .nav-link.active {
+    //     background-color: #1976d2 ;
+    //     color: #fff ;
+    // }
+    // .btn-outline-primary {
+    //     border: 1px solid #1976d2;
+    //     color: #1976d2;
+    // }
+    // .btn-outline-primary:hover {
+    //     background-color: #1976d2;
+    // }
+    // .btn-outline-primary:active {
+    //     background-color: #1976d2;
+    // }
+    // .btn-outline-primary:not(:disabled):not(.disabled):active {
+    //     background-color: #1976d2;
+    // }
+    // .pagination {
+    //     justify-content: center;
+    // }
+    // .bs-stepper .step-trigger {
+    //     padding: 20px 0;
+    // }
+    // .bs-stepper-content {
+    //     form {
+    //         .dstepper-block {
+    //             padding: 10px;
+    //         }
+    //     }
+    // }
+    // .bs-stepper-header {
+    //     flex-wrap: wrap;
+    // }
+    // .bs-stepper-content form .dstepper-block {
+    //     padding: 0;
+    // }
+    
+    
+    // @media (max-width:768px) {
+    //     .container-fluid {
+    //         padding: 0;
+    //         .tab-pane.active {
+    //             div {
+    //                 .card-body {
+    //                     padding: 1.25rem 0;
+    //                 }
+    //             }
+    //         }
+    //     }
+    //     h4 {
+    //         font-size: 13px;
+    //         margin-top: 5px ;
+    //     }
+    //     .line {
+    //         display: none;
+    //     }
+    //     .bs-stepper-header > div {
+    //         width: 50%;
+    //     }
+    //     .bs-stepper-header {
+    //         .step {
+    //             span {
+    //                 font-size: 12px;
+    //             }
+    //         }
+    //     }
+    //     .bs-stepper .step-trigger {
+    //         padding: 10px 0;
+    //     }
+    //     .bs-stepper-content form .dstepper-block {
+    //         padding: 10px;
+    //     }
+        
+    //     .form-control {
+    //         font-size: 12px;
+    //     }
+    //     .card {
+    //         padding: 10px;
+    //     }
+
+        /**** Employment Info ****/ 
+    //     .employment-btns {
+    //         button {
+    //             font-size: 12px;
+    //         }
+            
+    //     }
+        
+    //     .table thead th {
+    //       vertical-align: top;
+    //     }
+    //     .submit-btn {
+    //         input {
+    //             font-size: 12px;
+    //         }
+    //     }
+    //     .loyaltycarddetails {
+    //         font-size: 12px;
+    //     }
+        
+    // }
+//     @media (max-width:528px) {
+//         .loyaltycarddetails button{
+//             margin-top: 5px;
+//         }
+//         .table th, .table td {
+//             padding: 0px;
+//     }
+//     .PassportDetailsalert{
+//         background-color: #f7fafe;
+//         color: black;
+//         text-size-adjust: 10px;
+//         border-left: 3px solid #1976d2;
+        
+//     }
+// }
+// }

@@ -1,20 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import Stepper from 'bs-stepper';
-import { NgbPaginationConfig } from '@ng-bootstrap/ng-bootstrap';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
-
 @Component({
-  selector: 'app-manage-employees',
-  templateUrl: './manage-employees.component.html',
-  styleUrls: ['./manage-employees.component.scss']
+  selector: 'app-manage-loyalty-memberships',
+  templateUrl: './manage-loyalty-memberships.component.html',
+  styleUrls: ['./manage-loyalty-memberships.component.scss']
 })
-export class ManageEmployeesComponent implements OnInit {
-  page = 4;
-  page2 = 1;
-  currentPage = 3;
-  disablepage = 3;
-  isDisabled = true;
+export class ManageLoyaltyMembershipsComponent implements OnInit {
   loyaltycarddetails=[];
   airline="";
   cardnumber:number;
@@ -34,9 +26,6 @@ export class ManageEmployeesComponent implements OnInit {
   })
 
   constructor() { }
-  
-  
-  
   onsubmit(){
     this.loyaltycardobject=this.flightloyaltycards.value;
     this.loyaltycarddetails.push(this.loyaltycardobject);
@@ -48,26 +37,7 @@ export class ManageEmployeesComponent implements OnInit {
     
   }
 
-  name = 'Angular';
-  private stepper: Stepper;
-
-  previous(){
-    this.stepper.previous();
-  }
-
-  next() {
-    this.stepper.next();
-  }
-
-  onSubmit() {
-    return false;
-  }
-
   ngOnInit() {
-    this.stepper = new Stepper(document.querySelector('#stepper1'), {
-      linear: false,
-      animation: true
-    })
   }
 
 }

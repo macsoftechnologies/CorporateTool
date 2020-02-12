@@ -1,0 +1,79 @@
+::ng-deep {
+    .nav-item .nav-link.active {
+        background-color: #1976d2 ;
+        color: #fff ;
+    }
+    .btn-outline-primary {
+        border: 1px solid #1976d2;
+        color: #1976d2;
+    }
+    .btn-outline-primary:hover {
+        background-color: #1976d2;
+    }
+    .btn-outline-primary:active {
+        background-color: #1976d2;
+    }
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
+        background-color: #1976d2;
+    }
+    
+}
+
+.image img{
+    max-width: 100px;
+    height: 100px;
+}
+
+.image {
+    height: 100px;
+    width: 100px;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px 2px #ebe4e4;
+    border: 1px solid #ccc7c7;
+    margin-bottom: 0.7rem;
+    
+}
+.manage-form-footer {
+    text-align: end;
+    padding: 15px;
+    border-top: 1px solid #e9e6e6;
+    
+}
+
+@media (min-width: 200px) and (max-width: 768px) {
+    ::ng-deep {
+        .container-fluid {
+            padding: 0 15px 25px;
+        }
+    }
+    .logowrap{
+        flex-wrap: wrap-reverse;
+    }
+    .container {
+        div {
+            .card-body {
+                padding: 1.25rem 5px 0;
+            }
+        }
+    }
+    .card-body {
+        font-size: 12px;
+        // padding: 1.25rem 0 ;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .responsive-padding {
+        padding: 0;
+    }
+    
+    .manage-form-footer {
+        padding: 15px ;
+        button {
+            font-size: 12px;
+        }
+    }
+    
+    
+}
+

@@ -19,57 +19,206 @@ export const ROUTES: RouteInfo[] = [
     label: '',
     labelClass: 'label label-rouded label-themecolor',
     extralink: false,
-    submenu:[
-    {
-      path: '/corporateTool/manageCompany',
-      title: 'Manage Company',
-      icon: '',
-      class: '',
-      label: '',
-      labelClass: '',
-      extralink: false,
-      submenu: []
-    },
-    {
-      path: '/corporateTool/master',
-      title: 'Master',
-      icon: '',
-      class: '',
-      label: '',
-      labelClass: '',
-      extralink: false,
-      submenu: []
-    },
-    {
-      path: '/corporateTool/manageEmployees',
-      title: 'Manage Employees',
-      icon: '',
-      class: '',
-      label: '',
-      labelClass: '',
-      extralink: false,
-      submenu: []
-    },
-    {
-      path: '/corporateTool/adminpermissions',
-      title: 'Admin',
-      icon: '',
-      class: '',
-      label: '',
-      labelClass: '',
-      extralink: false,
-      submenu: []
-    },
-    {
-      path: '/corporateTool/travelpolicy-a',
-      title: 'Policy A',
-      icon: '',
-      class: '',
-      label: '',
-      labelClass: '',
-      extralink: false,
-      submenu: []
-    }
+    submenu: [
+      {
+        path: '/corporateTool/manageCompany',
+        title: 'Manage Company',
+        icon: '',
+        class: 'has-arrow',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: [
+          {
+            path: '/corporateTool/manageCompanysub',
+            title: 'Manage Company',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/managebranch',
+            title: 'Manage Branch',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+        ]
+      },
+      {
+        path: '/corporateTool/master',
+        title: 'Master',
+        icon: '',
+        class: 'has-arrow',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: [
+          {
+            path: '/corporateTool/managedepartment',
+            title: 'Manage Department',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/managegrades',
+            title: 'Manage Grades',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/managedesignations',
+            title: 'Manage Designations',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/manageteams',
+            title: 'Manage Teams',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/managebands',
+            title: 'Manage Bands',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+        ]
+      },
+      {
+        path: '/corporateTool/manageEmployees',
+        title: 'Manage Employees',
+        icon: '',
+        class: 'has-arrow',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: [
+          {
+            path: '/corporateTool/managepersonaldetails',
+            title: 'Personal Details',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/managepreferences',
+            title: 'Preferences',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+
+
+          {
+            path: '/corporateTool/manageemployment',
+            title: 'Employment',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/managepassportdetails',
+            title: 'Passport Details',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/manageloyaltymemberships',
+            title: 'Loyalty Memberships',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+        ]
+      },
+
+      {
+        path: '/corporateTool/permissions',
+        title: 'Permissions',
+        icon: '',
+        class: 'has-arrow',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: [
+          {
+            path: '/corporateTool/adminpermissions',
+            title: 'Admin',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+        ]
+      },
+      {
+        path: '/corporateTool/travelpolicy',
+        title: 'Travel Policy',
+        icon: '',
+        class: 'has-arrow',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: [
+          {
+            path: '/corporateTool/travelpolicya',
+            title: 'Policy A',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          }
+        ]
+      },
+      
     ]
   },
   /* {

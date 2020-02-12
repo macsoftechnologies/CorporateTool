@@ -1,0 +1,60 @@
+/**** Tabs Styles ****/ 
+::ng-deep {
+    .nav-item .nav-link.active {
+        background-color: #1976d2 ;
+        color: #fff ;
+    }
+    .btn-outline-primary {
+        border: 1px solid #1976d2;
+        color: #1976d2;
+    }
+    .btn-outline-primary:hover {
+        background-color: #1976d2;
+    }
+    .btn-danger {
+        background-color: red;
+    }
+    .input-group > .form-control:not(:first-child) {
+        font-size:14px;
+    }
+    .btn-outline-primary:not(:disabled):not(.disabled):active {
+        background-color: #1976d2;
+        border-color: #1976d2;
+    }
+    .employment-btns {
+        text-align: end;
+        
+    }
+    
+    @media (max-width:768px) {
+        .card-body {
+            font-size: 12px;
+            padding: 1.25rem 0;
+        }
+        .form-control {
+            font-size: 12px !important;
+        }
+        
+        .responsive-padding {
+            padding: 0;
+        }
+        .employment-btns {
+            button {
+                font-size: 12px;
+            }
+        }
+        .responsive-padding-body {
+            padding: 1.25rem 5px 0;
+        }
+        .container-fluid {
+            padding: 0 15px 25px;
+            .tab-pane.active {
+                div {
+                    .card-body {
+                        padding: 1.25rem 0;
+                    }
+                }
+            }
+        }
+    }
+}
