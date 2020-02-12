@@ -43,11 +43,14 @@
     }
     .customselect[_ngcontent-c2] .custom-select[_ngcontent-c2] {
         max-width: 36%;}
-}
+   }
+   .customselect[_ngcontent-c2] .Econamy[_ngcontent-c2] {
+    max-width: 20%;
+  }
 
     
     .card{
-        font-size: 8px;
+        font-size: 9px;
     }
     .customselect{
         display: flex;
@@ -63,8 +66,7 @@
        
     }
     .flightcustomselect{
-        display: flex;
-        align-items: baseline;
+       
         .custom-select{
             max-width:23%;
             font-size: 10px;
