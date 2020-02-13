@@ -4,17 +4,7 @@
     .employment-btns {
         text-align: end;
     }
-    .edit-btns a {
-        &:nth-child(1)  i {
-            color: rgb(64, 202, 64);
-        }
-        &:nth-child(2)  i {
-            color: #b1bdca;
-        }
-        &:nth-child(3)  i {
-            color: rgb(209, 49, 49);
-        }
-    }
+    
 
     ::ng-deep {
         .pagination {
@@ -149,3 +139,42 @@
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
   }
+
+  .form-check-label-text {
+    margin-left: 35px !important;
+      input {
+          height: 20px;
+          width: 30px;
+          position: absolute;
+          left: 38px;
+      }
+      
+  }
+/****** Cards and Accordions ******/   
+::ng-deep {
+    .card-header  {
+        background-color: #fff;
+        h5 {
+            button {
+                &:hover {
+                    text-decoration: none;
+                }
+                &:focus {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    /******Responsive****/ 
+    @media (max-width:768px) {
+        .container-fluid {
+            padding: 0 15px 20px;
+        }
+        .form-check-label {
+            font-size: 12px !important;
+        }
+    }
+    
+    
+}
+
