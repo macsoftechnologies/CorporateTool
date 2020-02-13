@@ -4,7 +4,7 @@
 					<ngb-panel>
             <ng-template ngbPanelTitle>
               <div class="row">
-                <div class="col-lg-10 text-left">Preferred Airlines</div>
+                <div class="col-lg-10 col-md-10 col-sm-10 text-left">Preferred Airlines</div>
                 <div class="col-lg-2"><i class="fa fa-sort-desc text-right"></i></div>
               </div>
             </ng-template>
@@ -59,14 +59,17 @@
         </div>
         
       <div class="card">
-        <div class="card-body">
+        
           <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-            <ngb-panel title="Excluded Airlines">
-						<ng-template ngbPanelTitle>
-							
-						</ng-template>
+            <ngb-panel>
+              <ng-template ngbPanelTitle>
+                <div class="row">
+                  <div class="col-lg-10 text-left">Excluded Airlines</div>
+                  <div class="col-lg-2"><i class="fa fa-sort-desc text-right"></i></div>
+                </div>
+              </ng-template>
 						<ng-template ngbPanelContent>
-              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit2()">
                   <div class="form-group">
                     <div class="row">
                       <div class="col-lg-10">
@@ -98,7 +101,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let items of PreferredAirlinesarray">
+                  <tr *ngFor="let items of PreferredAirlinesarray2">
                   <td>{{items.code}}</td>
                   <td>{{items.airlinename}}</td>
                   <td class="edit-btns">
@@ -111,12 +114,18 @@
 						</ng-template>
           </ngb-panel>
         </ngb-accordion>
-        </div>
+        
       </div>
           <div class="card">
-            <div class="card-body">
+            
               <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-                <ngb-panel title="Preferred Hotels"><hr>
+                <ngb-panel>
+                  <ng-template ngbPanelTitle>
+                    <div class="row">
+                      <div class="col-lg-10 text-left">Preferred Hotels</div>
+                      <div class="col-lg-2"><i class="fa fa-sort-desc text-right"></i></div>
+                    </div>
+                  </ng-template>
                   <ng-template ngbPanelContent>
                     <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
                       <div class="form-group">
@@ -162,15 +171,19 @@
                   </div>
 						</ng-template>
 					</ngb-panel>
-				</ngb-accordion>
-
-			</div>
-    </div>
+        </ngb-accordion>
+      </div>
 
     <div class="card">
-      <div class="card-body">
+      
         <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
-          <ngb-panel title="Skip Countries"><hr>
+          <ngb-panel>
+            <ng-template ngbPanelTitle>
+              <div class="row">
+                <div class="col-lg-10 text-left">Skip Countries</div>
+                <div class="col-lg-2"><i class="fa fa-sort-desc text-right"></i></div>
+              </div>
+            </ng-template>
             <ng-template ngbPanelContent>
               <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
                 <div class="form-group">
@@ -217,9 +230,8 @@
       </ng-template>
     </ngb-panel>
   </ngb-accordion>
+</div>
 
-</div>
-</div>
 
 
 
