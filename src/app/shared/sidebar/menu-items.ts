@@ -218,6 +218,16 @@ export const ROUTES: RouteInfo[] = [
           }
         ]
       },
+      {
+        path: '/corporateTool/companypreferences',
+        title: 'Company preferences',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      }
       
     ]
   },

@@ -23,6 +23,7 @@ import { MasterManageGradesComponent } from './master-manage-grades/master-manag
 import { MasterManageDesignationsComponent } from './master-manage-designations/master-manage-designations.component';
 import { MasterManageTeamsComponent } from './master-manage-teams/master-manage-teams.component';
 import { MasterManageBandsComponent } from './master-manage-bands/master-manage-bands.component';
+import { CompanyPreferencesComponent } from './company-preferences/company-preferences.component';
 
 
 
@@ -34,7 +35,7 @@ import { MasterManageBandsComponent } from './master-manage-bands/master-manage-
     CommonModule,
     ReactiveFormsModule
 ],
-declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent, ManagePersonalDetailsComponent, ManagePreferencesComponent, ManageEmploymentComponent, ManagePassportDetailsComponent, ManageLoyaltyMembershipsComponent, TravelPolicyComponent, ManageCompanySubComponent, ManageBranchComponent, MasterManageDepartmentComponent, MasterManageGradesComponent, MasterManageDesignationsComponent, MasterManageTeamsComponent, MasterManageBandsComponent]
+declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent, ManagePersonalDetailsComponent, ManagePreferencesComponent, ManageEmploymentComponent, ManagePassportDetailsComponent, ManageLoyaltyMembershipsComponent, TravelPolicyComponent, ManageCompanySubComponent, ManageBranchComponent, MasterManageDepartmentComponent, MasterManageGradesComponent, MasterManageDesignationsComponent, MasterManageTeamsComponent, MasterManageBandsComponent, CompanyPreferencesComponent]
 })
 
 export class CorporateToolModule {

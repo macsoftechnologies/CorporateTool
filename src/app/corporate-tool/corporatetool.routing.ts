@@ -18,6 +18,7 @@ import { MasterManageGradesComponent } from './master-manage-grades/master-manag
 import { MasterManageDesignationsComponent } from './master-manage-designations/master-manage-designations.component';
 import { MasterManageTeamsComponent } from './master-manage-teams/master-manage-teams.component';
 import { MasterManageBandsComponent } from './master-manage-bands/master-manage-bands.component';
+import { CompanyPreferencesComponent } from './company-preferences/company-preferences.component';
 
 export const corporateToolRoutes: Routes = [
     {
@@ -158,6 +159,13 @@ export const corporateToolRoutes: Routes = [
             component: TravelpolicyAComponent,
             data: {
               title: 'Policy A',
+            }
+          },
+          {
+            path: 'companypreferences',
+            component: CompanyPreferencesComponent,
+            data: {
+              title: 'Company Preferences',
             }
           }
         ]
