@@ -12,4 +12,8 @@ export class ManagePersonalDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  public next():void{
+    
+  }
+
 }

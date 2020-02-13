@@ -12,4 +12,11 @@ export class ManagePreferencesComponent implements OnInit {
   ngOnInit() {
   }
 
+  public previous(){
+
+  }
+  public next(){
+    
+  }
+
 }

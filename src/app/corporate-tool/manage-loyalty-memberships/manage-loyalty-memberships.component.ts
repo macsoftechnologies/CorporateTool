@@ -19,6 +19,7 @@ export class ManageLoyaltyMembershipsComponent implements OnInit {
     {id:4,name:"uk"},
     
   ]
+  page=1;
 
   flightloyaltycards= new FormGroup({
     airline: new FormControl(this.selectairline[0].name,Validators.required),

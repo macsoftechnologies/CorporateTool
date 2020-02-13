@@ -12,4 +12,12 @@ export class ManagePassportDetailsComponent implements OnInit {
   ngOnInit() {
   }
 
+  public previous(){
+
+  }
+
+  public next(){
+    
+  }
+
 }
