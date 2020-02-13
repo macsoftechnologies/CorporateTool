@@ -3,28 +3,17 @@
   <div class="col-md-12 responsive-padding">
     <div class="card">
         <div class="card-body">
+          <div class="policya">
+            <input type="text"  placeholder="Policy A" id="edit">
+            <label for="edit"><i class="fa fa-pencil policyaicons"></i></label>
+            <i class="fa fa-trash-o policyaicons"></i>
+          </div>
+          
           <ngb-tabset>
+
             <ngb-tab title="Flights">
                 <ng-template ngbTabContent>
                   
-                    <!-- <div class="form-group">
-                      <label>Country</label>
-                      <div class="input-group mb-3">
-                          <div class="input-group-prepend">
-                              <span class="input-group-text" id="basic-addon11">
-                                  <i class="fa fa-plane"></i>
-                              </span>
-                          </div>
-                          <select class=" custom-select" id="country" name="country">
-                            <option>--select Country--</option>
-                            <option>India</option>
-                            <option>US</option>
-                            <option>UK</option>
-                            <option>DXB</option>
-                            <option>China</option>
-                            </select>
-                          </div>
-                  </div> -->
                   <div class="customselect">
                     <select class="custom-select  mt-2">
                       <option>band1</option>
@@ -104,14 +93,14 @@
 
                   </div>
                   <div class="flightcustomselect">
-                    <span>Approval Required</span>
+                    <span class="for-Airfare-Over">Approval Required</span>
                     <select class="custom-select">
                       <option>no</option>
                     </select>
-                    <span>for Airfare Over<input type="number" class="Econamy" value="430000.00">null</span>
+                    <span >for Airfare Over<input type="number" class="Econamy" value="430000.00">null</span>
                   </div>
                   <div class="flightcustomselect">
-                    <span>Approval Required</span>
+                    <span class="for-Airfare-Over">Approval Required</span>
                     <select class="custom-select">
                       <option>no</option>
                     </select>
@@ -124,7 +113,11 @@
                 <ng-template ngbTabContent>
                 </ng-template>
               </ngb-tab>
+             
+              
             </ngb-tabset>
+            
+            
           </div>
         </div>
       </div>

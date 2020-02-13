@@ -1,4 +1,15 @@
-
+.card-body{
+    position: relative;
+}
+.policya{
+    position: absolute;
+    right: 5%;
+    top: 25px;
+    .policyaicons{
+        font-size: 18px;
+        margin-left: 5px;
+    }
+}
 .flightcustomselect{
     display: flex;
     align-items: baseline;
@@ -7,6 +18,7 @@
         font-size: 13px;
         margin-top: 10px;
         margin-right: 5px;
+        margin-left: 5px;
      }
     .Econamy{
         width: 25%;
@@ -36,6 +48,13 @@
     .container{
         padding: 0px;
     }
+    .policya{
+        
+        
+        .policyaicons{
+            font-size: 12px;
+            margin-left: 5px;
+        }}
     ::ng-deep {
 
     .container-fluid {
@@ -61,7 +80,7 @@
     
 }
        .Econamy{
-        max-width: 10%;
+        width: 19%;
     }
        
     }
@@ -75,6 +94,9 @@
          }
         .Econamy{
             width: 50%;
+        }
+        .for-Airfare-Over{
+            width: 15%;
         }
     }
     
