@@ -69,7 +69,7 @@
                 </div>
               </ng-template>
 						<ng-template ngbPanelContent>
-              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit2()">
                   <div class="form-group">
                     <div class="row">
                       <div class="col-lg-10">
@@ -101,7 +101,7 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let items of PreferredAirlinesarray">
+                  <tr *ngFor="let items of PreferredAirlinesarray2">
                   <td>{{items.code}}</td>
                   <td>{{items.airlinename}}</td>
                   <td class="edit-btns">

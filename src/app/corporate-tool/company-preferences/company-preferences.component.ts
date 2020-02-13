@@ -10,6 +10,7 @@ import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 export class CompanyPreferencesComponent implements OnInit {
   PreferredAirlinesobject={};
   PreferredAirlinesarray=[];
+  PreferredAirlinesarray2=[]
   selectairline=[
     {code:"sa",airlinename:"Select Airline Name"},
     {code:"AI",airlinename:"Air india"},
@@ -32,6 +33,14 @@ export class CompanyPreferencesComponent implements OnInit {
     })
     
     
+  };
+  onsubmit2(){
+    this.PreferredAirlinesobject=this.PreferredAirlines.value;
+    this.PreferredAirlinesarray2.push(this.PreferredAirlinesobject);
+    this.PreferredAirlines.patchValue({
+      airline:this.selectairline[0].airlinename,
+      
+    })
   }
 
 
