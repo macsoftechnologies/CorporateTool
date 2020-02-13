@@ -1,0 +1,81 @@
+.body-padding {
+    padding: 15px;
+
+    .employment-btns {
+        text-align: end;
+    }
+    .edit-btns a {
+        &:nth-child(1)  i {
+            color: rgb(64, 202, 64);
+        }
+        &:nth-child(2)  i {
+            color: #b1bdca;
+        }
+        &:nth-child(3)  i {
+            color: rgb(209, 49, 49);
+        }
+    }
+
+    ::ng-deep {
+        .pagination {
+            justify-content: center;
+        }
+    } 
+    .LevelsOfApprovalborder{
+        border-radius: 5px;
+    border: 1px solid black;
+    } 
+}
+@media (max-width:768px) {
+    h4 {
+        font-size: 13px;
+        margin-top: 5px ;
+    }
+    .form-control {
+        font-size: 12px;
+    }
+    .employment-btns {
+        input {
+            font-size: 12px;
+        }
+        
+    }
+    .loyaltycarddetails {
+        font-size: 12px;
+    }
+    ::ng-deep {
+        .container-fluid {
+            padding: 0 15px 25px;
+        }
+    }
+}
+
+
+::ng-deep {
+    .container-fluid {
+        padding: 15px 30px ;
+    }
+    .button:not(:disabled), [type="button"]:not(:disabled){
+        width: 100%
+    }
+}
+
+    input.larger { 
+    transform: scale(1.8); 
+    margin: 5px;
+    } 
+    .form-check-input {
+        top: 93px;
+        left: 36px;
+    }
+    
+    .input-feild-checkbox  {
+        border-radius: 5px;
+        border: 1px solid #b6b6b6;
+        div {
+            label {
+                margin: 5px;
+                margin-left: 37px;
+            }
+        }
+    }

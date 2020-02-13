@@ -1,3 +1,436 @@
-<p>
-  company-preferences works!
-</p>
+
+<div class="card"> 
+        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+					<ngb-panel>
+            <ng-template ngbPanelTitle>
+              <div class="row">
+                <div class="col-lg-10 text-left">Preferred Airlines</div>
+                <div class="col-lg-2"><i class="fa fa-sort-desc text-right"></i></div>
+              </div>
+            </ng-template>
+            
+						<ng-template ngbPanelContent>
+              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg-10">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon11">
+                                <i class="fa fa-address-card"></i>
+                            </span>
+                        </div>
+                        <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
+                          <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <h4 class="text-primary mt-3">Preferred Airlines List</h4><hr>
+              <div class="table-responsive">
+              <table class="table table-stripped loyaltycarddetails">
+                <thead>
+                  <tr class="font-weight-bold text-danger">
+                    <th>Airline Code</th>
+                    <th>Airline Name</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let items of PreferredAirlinesarray">
+                  <td>{{items.code}}</td>
+                  <td>{{items.airlinename}}</td>
+                  <td class="edit-btns">
+                    <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                  </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+						</ng-template>
+					</ngb-panel>
+					
+          </ngb-accordion>
+        </div>
+        
+      <div class="card">
+        <div class="card-body">
+          <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+            <ngb-panel title="Excluded Airlines">
+						<ng-template ngbPanelTitle>
+							
+						</ng-template>
+						<ng-template ngbPanelContent>
+              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+                  <div class="form-group">
+                    <div class="row">
+                      <div class="col-lg-10">
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon11">
+                                <i class="fa fa-address-card"></i>
+                            </span>
+                        </div>
+                        <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
+                          <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="col-lg-2">
+                      <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                    </div>
+                  </div>
+                </div>
+              </form>
+              <h4 class="text-primary mt-3">Excluded Airlines List</h4><hr>
+              <div class="table-responsive">
+              <table class="table table-stripped loyaltycarddetails">
+                <thead>
+                  <tr class="font-weight-bold text-danger">
+                    <th>Airline Code</th>
+                    <th>Airline Name</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr *ngFor="let items of PreferredAirlinesarray">
+                  <td>{{items.code}}</td>
+                  <td>{{items.airlinename}}</td>
+                  <td class="edit-btns">
+                    <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                  </td>
+                  </tr>
+                </tbody>
+              </table>
+              </div>
+						</ng-template>
+          </ngb-panel>
+        </ngb-accordion>
+        </div>
+      </div>
+          <div class="card">
+            <div class="card-body">
+              <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+                <ngb-panel title="Preferred Hotels"><hr>
+                  <ng-template ngbPanelContent>
+                    <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-lg-10">
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon11">
+                                    <i class="fa fa-address-card"></i>
+                                </span>
+                            </div>
+                            <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
+                              <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-lg-2">
+                          <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <h4 class="text-primary mt-3">Preferred Hotels List</h4><hr>
+                  <div class="table-responsive">
+                  <table class="table table-stripped loyaltycarddetails">
+                    <thead>
+                      <tr class="font-weight-bold text-danger">
+                        <th>Hotel Name</th>
+                        <th>Location</th>
+                        <th>Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr *ngFor="let items of PreferredAirlinesarray">
+                      <td>{{items.code}}</td>
+                      <td>{{items.airlinename}}</td>
+                      <td class="edit-btns">
+                        <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                      </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+						</ng-template>
+					</ngb-panel>
+				</ngb-accordion>
+
+			</div>
+    </div>
+
+    <div class="card">
+      <div class="card-body">
+        <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+          <ngb-panel title="Skip Countries"><hr>
+            <ng-template ngbPanelContent>
+              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-lg-10">
+                  <div class="input-group">
+                      <div class="input-group-prepend">
+                          <span class="input-group-text" id="basic-addon11">
+                              <i class="fa fa-address-card"></i>
+                          </span>
+                      </div>
+                      <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
+                        <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-2">
+                    <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                  </div>
+                </div>
+              </div>
+            </form>
+            <h4 class="text-primary mt-3">Skipped Countries List</h4><hr>
+            <div class="table-responsive">
+            <table class="table table-stripped loyaltycarddetails">
+              <thead>
+                <tr class="font-weight-bold text-danger">
+                  <th>Country Code</th>
+                  <th>Country Name</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let items of PreferredAirlinesarray">
+                <td>{{items.code}}</td>
+                <td>{{items.airlinename}}</td>
+                <td class="edit-btns">
+                  <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                </td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+      </ng-template>
+    </ngb-panel>
+  </ngb-accordion>
+
+</div>
+</div>
+
+
+
+
+
+
+<div class="card">
+ 
+    
+  <div class="container-fluid">
+    <div class=" mt-2">
+      <h4>General Preference</h4><hr>
+      
+      <div class="input-feild-checkbox mb-3">
+        <div class="d-inline">
+        <label class="form-check-label" for="">Only Refundable Flights
+          <input type="checkbox" class="form-check-input  larger" value="Only Refundable Flights" id="">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      </div>
+
+      <!-- <div class="input-feild-checkbox mb-3">
+        <div class="d-inline">
+        <label class="" for="">
+          <select class="">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>Levels Of Approval
+        </label>
+      </div>
+      </div> -->
+      <div class="row border p-1 LevelsOfApprovalborder">
+        <div class="clo-lg-1">
+          <select class="">
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+          </select>
+        </div>
+        <div class="col-lg-11">
+            <label>Levels Of Approval</label>
+        </div>
+      </div>
+
+      <div class="row border p-1 LevelsOfApprovalborder">
+        <div class="clo-lg-1">
+          <input type="number" value="20">
+        </div>
+        <div class="col-lg-11">
+            <label>Mins For Next Escalation</label>
+        </div>
+      </div>
+    
+   </div><hr>
+   <div class="admin-btn text-right">
+    <button class="btn btn-primary">Update</button>
+   </div>
+   <h4>Currency Change</h4>
+   <div class="form-group">
+    <!-- <label>Preferred Meal</label> -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon14">
+                <i class="fa fa-address-card"></i>
+            </span>
+        </div>
+        <select class="form-control" id="city" name="city">
+          <option>--Select Currency--</option>
+          <!-- <option>Banglore</option>
+          <option>Newyork</option>
+          <option>London</option>
+          <option>Dubai</option>
+          <option>Shanghai</option> -->
+          </select> 
+      </div>
+</div>
+   <div class="admin-btn text-right">
+     <button class="btn btn-primary">Update</button>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  
+    
+  <div class="container-fluid">
+    <div class=" mt-2">
+      <h4 class="mt-2">Passport Expiry Notification</h4><hr>
+      
+      
+      <div class="input-feild-checkbox mb-3">
+        <div class="d-inline">
+        <label class="form-check-label" for="">Send Mail
+          <input type="checkbox" class="form-check-input  larger" value="Only Refundable Flights" id="">
+          <span class="checkmark"></span>
+        </label>
+      </div>
+      </div>
+
+      
+
+      
+
+      <div class="row border p-1 LevelsOfApprovalborder">
+        <div class="clo-lg-1">
+          <input type="checkbox" value="20">
+        </div>
+        <div class="col-lg-11">
+            <label>Resend Mail Before one Month </label>
+        </div>
+      </div>
+
+      <div class="row border p-1 LevelsOfApprovalborder">
+        <div class="clo-lg-1">
+          <input type="number" value="20">
+        </div>
+        <div class="col-lg-11">
+            <label>No Of Days Before Passport Expires</label>
+        </div>
+      </div>
+    
+   </div><hr>
+   <div class="admin-btn text-right">
+    <button class="btn btn-primary">Update</button>
+   </div>
+   <h4>Defauls Approver</h4><hr>  
+   <div class="form-group">
+    <!-- <label>Preferred Meal</label> -->
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon14">
+                <i class="fa fa-address-card"></i>
+            </span>
+        </div>
+        <select class="form-control" id="city" name="city">
+          <option>--Level 1 Approver--</option>
+          <!-- <option>Banglore</option>
+          <option>Newyork</option>
+          <option>London</option>
+          <option>Dubai</option>
+          <option>Shanghai</option> -->
+          </select> 
+      </div>
+</div>
+
+<div class="form-group">
+  <!-- <label>Preferred Meal</label> -->
+  <div class="input-group mb-3">
+      <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon14">
+              <i class="fa fa-address-card"></i>
+          </span>
+      </div>
+      <select class="form-control" id="city" name="city">
+        <option>--Level 2 Approver--</option>
+        <!-- <option>Banglore</option>
+        <option>Newyork</option>
+        <option>London</option>
+        <option>Dubai</option>
+        <option>Shanghai</option> -->
+        </select> 
+    </div>
+</div>
+   <div class="admin-btn text-right">
+     <button class="btn btn-primary">Update</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+<div class="card">
+    
+  <div class="container-fluid">
+    <div class=" mt-2">
+      <h4>Authentication Preference</h4><hr>
+      
+       
+      <div class="row border p-1 LevelsOfApprovalborder  mb-2">
+        <div class="clo-lg-1">
+          <input type="checkbox" value="20">
+        </div>
+        <div class="col-lg-11">
+            <label>Ldap </label>
+        </div>
+      </div>
+      <div class="row border p-1 LevelsOfApprovalborder">
+        <div class="clo-lg-1">
+          <input type="checkbox" value="20">
+        </div>
+        <div class="col-lg-11">
+            <label>Active Directory </label>
+        </div>
+      </div>
+    
+   </div><hr>
+   <div class="admin-btn text-right">
+     <button class="btn btn-primary">update</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+   
+
