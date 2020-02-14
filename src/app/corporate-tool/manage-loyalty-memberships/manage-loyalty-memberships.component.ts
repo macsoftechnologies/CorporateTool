@@ -8,8 +8,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class ManageLoyaltyMembershipsComponent implements OnInit {
   loyaltycarddetails=[];
-  airline="";
-  cardnumber:number;
+  
   loyaltycardobject={};
   selectairline=[
     {id:1,name:"Selected Airline"},
@@ -28,7 +27,7 @@ export class ManageLoyaltyMembershipsComponent implements OnInit {
 
   constructor() { }
   onsubmit(){
-    this.loyaltycardobject=this.flightloyaltycards.value;
+    this.loyaltycardobject=this.flightloyaltycards.value
     this.loyaltycarddetails.push(this.loyaltycardobject);
     this.flightloyaltycards.patchValue({
       airline:this.selectairline[0].name,

@@ -4,16 +4,16 @@
 					<ngb-panel>
             <ng-template ngbPanelTitle>
               <div class="row">
-                <div class="col-8 col-lg-10 col-md-10 col-sm-10 text-left">Preferred Airlines</div>
+                <div class="col-8 col-lg-10  text-left">Preferred Airlines</div>
                 <div class="col-4 col-lg-2 text-right"><i class="fa fa-sort-desc "></i></div>
               </div>
             </ng-template>
             
 						<ng-template ngbPanelContent>
-              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit(PreferredAirlines)">
                   <div class="form-group">
                     <div class="row">
-                      <div class="col-lg-10">
+                      <div class="col-lg-10 col-md-10">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon11">
@@ -21,17 +21,24 @@
                             </span>
                         </div>
                         <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
-                          <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                          <option *ngFor="let item of selectairline let i=index" (value)="item.airlinename">{{item.airlinename}}</option>
                         </select>
+            
+                        
                       </div>
                     </div>
-                    <div class="col-lg-2">
-                      <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                    <div class="col-lg-2 col-md-2 employment-btns">
+                      <input type="submit" class="btn btn-outline-primary" value="Add">
                     </div>
                   </div>
                 </div>
               </form>
               <h4 class="text-primary mt-3">Preferred Airlines List</h4><hr>
+              <div class="text-right">
+                <a href="#" class="previousnextbutton"><i class="fa fa-angle-left"></i></a>
+                <a href="#" class="previousnextbutton"><i class="fa fa-angle-right"></i></a>
+              </div>
+              
               <div class="table-responsive">
               <table class="table table-stripped loyaltycarddetails">
                 <thead>
@@ -44,7 +51,7 @@
                 <tbody>
                   <tr *ngFor="let items of PreferredAirlinesarray">
                   <td>{{items.code}}</td>
-                  <td>{{items.airlinename}}</td>
+                  <td>{{items.airline}}</td>
                   <td class="edit-btns">
                     <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                   </td>
@@ -69,10 +76,10 @@
                 </div>
               </ng-template>
 						<ng-template ngbPanelContent>
-              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit2()">
+              <form [formGroup]="ExcludedAirlines" (ngSubmit)="onsubmit2()">
                   <div class="form-group">
                     <div class="row">
-                      <div class="col-lg-10">
+                      <div class="col-lg-10 col-md-10">
                     <div class="input-group">
                         <div class="input-group-prepend">
                             <span class="input-group-text" id="basic-addon11">
@@ -80,17 +87,21 @@
                             </span>
                         </div>
                         <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
-                          <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                          <option *ngFor="let item of selectExcludedAirlines" (value)="item.airlinename" >{{item.airlinename}}</option>
                         </select>
                       </div>
                     </div>
-                    <div class="col-lg-2">
-                      <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                    <div class="col-lg-2 col-md-2 employment-btns">
+                      <input type="submit" class="btn btn-outline-primary" value="Add">
                     </div>
                   </div>
                 </div>
               </form>
               <h4 class="text-primary mt-3">Excluded Airlines List</h4><hr>
+              <div class="text-right">
+                <a href="#" class="previousnextbutton"><i class="fa fa-angle-left"></i></a>
+                <a href="#" class="previousnextbutton"><i class="fa fa-angle-right"></i></a>
+              </div>
               <div class="table-responsive">
               <table class="table table-stripped loyaltycarddetails">
                 <thead>
@@ -101,9 +112,9 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr *ngFor="let items of PreferredAirlinesarray2">
+                  <tr *ngFor="let items of ExcludedAirlinesarray">
                   <td>{{items.code}}</td>
-                  <td>{{items.airlinename}}</td>
+                  <td>{{items.airline}}</td>
                   <td class="edit-btns">
                     <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                   </td>
@@ -127,30 +138,34 @@
                     </div>
                   </ng-template>
                   <ng-template ngbPanelContent>
-                    <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+                    <form [formGroup]="PreferredHotels" (ngSubmit)="onsubmit3()">
                       <div class="form-group">
                         <div class="row">
-                          <div class="col-lg-10">
+                          <div class="col-lg-10 col-md-10">
                         <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text" id="basic-addon11">
                                     <i class="fa fa-address-card"></i>
                                 </span>
                             </div>
-                            <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
-                              <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                            <select class="form-control" formControlName="hotelname" id="city" name="city" placeholder="Select Airline">
+                              <option *ngFor="let item of selecthotel" (value)="item.hotelname" >{{item.hotelname}}</option>
                             </select>
                           </div>
                         </div>
-                        <div class="col-lg-2">
-                          <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                        <div class="col-lg-2 col-md-2 employment-btns">
+                          <input type="submit" class="btn btn-outline-primary" value="Add">
                         </div>
                       </div>
                     </div>
                   </form>
                   <h4 class="text-primary mt-3">Preferred Hotels List</h4><hr>
+                  <div class="text-right">
+                      <a href="#" class="previousnextbutton"><i class="fa fa-angle-left"></i></a>
+                      <a href="#" class="previousnextbutton"><i class="fa fa-angle-right"></i></a>
+                  </div>
                   <div class="table-responsive">
-                  <table class="table table-stripped loyaltycarddetails">
+                  <table class="table table-stripped">
                     <thead>
                       <tr class="font-weight-bold text-danger">
                         <th>Hotel Name</th>
@@ -159,9 +174,9 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr *ngFor="let items of PreferredAirlinesarray">
-                      <td>{{items.code}}</td>
-                      <td>{{items.airlinename}}</td>
+                      <tr *ngFor="let items of preferredHotelarray">
+                      <td>{{items.hotelname}}</td>
+                      <td>{{items.location}}</td>
                       <td class="edit-btns">
                         <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                       </td>
@@ -185,28 +200,32 @@
               </div>
             </ng-template>
             <ng-template ngbPanelContent>
-              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
+              <form [formGroup]="skipCountries" (ngSubmit)="onsubmit4()">
                 <div class="form-group">
                   <div class="row">
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 col-md-10">
                   <div class="input-group">
                       <div class="input-group-prepend">
                           <span class="input-group-text" id="basic-addon11">
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
-                        <option *ngFor="let item of selectairline" (value)="item.airlinename" >{{item.airlinename}}</option>
+                      <select class="form-control" formControlName="countryname" id="city" name="city" placeholder="Select Airline">
+                        <option *ngFor="let item of selectskipCountries" (value)="item.countryname" >{{item.countryname}}</option>
                       </select>
                     </div>
                   </div>
-                  <div class="col-lg-2">
-                    <input type="submit" class="btn btn-outline-primary employment-btns" value="Add">
+                  <div class="col-lg-2 col-md-2 employment-btns">
+                    <input type="submit" class="btn btn-outline-primary" value="Add">
                   </div>
                 </div>
               </div>
             </form>
             <h4 class="text-primary mt-3">Skipped Countries List</h4><hr>
+            <div class="text-right">
+                <a href="#" class="previousnextbutton"><i class="fa fa-angle-left"></i></a>
+                <a href="#" class="previousnextbutton"><i class="fa fa-angle-right"></i></a>
+              </div>
             <div class="table-responsive">
             <table class="table table-stripped loyaltycarddetails">
               <thead>
@@ -217,9 +236,9 @@
                 </tr>
               </thead>
               <tbody>
-                <tr *ngFor="let items of PreferredAirlinesarray">
+                <tr *ngFor="let items of skipCountriesarray">
                 <td>{{items.code}}</td>
-                <td>{{items.airlinename}}</td>
+                <td>{{items.countryname}}</td>
                 <td class="edit-btns">
                   <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                 </td>
@@ -275,7 +294,7 @@
         </div>
         </div>
       </div>
-      <div class="col-lg-4" >
+      <div class="col-lg-4  " >
         <div class="input-feild-checkbox mb-3">
           <div class="d-inline">
           <label class="form-check-label-text" >Login Attempts
@@ -289,7 +308,7 @@
         <div class="input-feild-checkbox mb-3">
           <div class="d-inline">
           <label class="form-check-label-text" >Rebook Time Limit Hours
-            <input type="text" class="form-check-input " >
+            <input type="text" class="form-check-input" >
             <!-- <span class="checkmark"></span> -->
           </label>
         </div>
@@ -403,9 +422,9 @@
    <div class="admin-btn text-right">
     <button class="btn btn-primary">Update</button>
    </div>
-   <h4>Defauls Approver</h4><hr>  
+   <h4>Default Approver</h4><hr>  
    <div class="form-group">
-    <!-- <label>Preferred Meal</label> -->
+    
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon14">

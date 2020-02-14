@@ -24,5 +24,7 @@ export class ManageCompanyComponent implements OnInit {
       }
     }
   }
+ 
 
 }
+

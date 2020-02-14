@@ -25,5 +25,8 @@ export class ManageCompanySubComponent implements OnInit {
       }
     }
   }
+  Update(){
+    alert("Manage Company has been Created Successfully")
+  }
 
 }

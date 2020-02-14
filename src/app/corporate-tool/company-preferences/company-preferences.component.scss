@@ -1,20 +1,8 @@
-.body-padding {
-    padding: 15px;
-
-    .employment-btns {
-        text-align: end;
-    }
-    
-
-    ::ng-deep {
-        .pagination {
-            justify-content: center;
-        }
-    } 
-    .LevelsOfApprovalborder{
-        border-radius: 5px;
-    border: 1px solid black;
-    } 
+// pagination 
+.previousnextbutton{
+   font-size: 26px;
+   margin-left: 15px;
+   color: darkgrey;
 }
 @media (max-width:768px) {
     h4 {
@@ -25,9 +13,16 @@
         font-size: 12px;
     }
     .employment-btns {
+        margin-top: 5px;
+            text-align: end;
         input {
             font-size: 12px;
+            
         }
+        .previousnextbutton{
+            font-size: 16px;
+            
+         }
         
     }
     .loyaltycarddetails {
