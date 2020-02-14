@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ServiceService } from '../service.service';
 
 @Component({
   selector: 'app-master-manage-bands',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./master-manage-bands.component.scss']
 })
 export class MasterManageBandsComponent implements OnInit {
-
-  constructor() { }
-
+  departmentname=[]
+  grade=[]
+  constructor( private service:ServiceService) { }
+ 
   ngOnInit() {
+    this.departmentname=this.service.departmentname;
+    this.grade=this.service.grade
+
   }
 
 }

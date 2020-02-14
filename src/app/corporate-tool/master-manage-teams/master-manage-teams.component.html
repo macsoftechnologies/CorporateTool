@@ -28,11 +28,11 @@
                 <div class="form-group">
                       <!-- <label>Department</label> -->
                         <select class="form-control custom-select">
-                            <option>--Select your Department--</option>
-                            <option>IT Department</option>
+                        <option *ngFor="let item of departmentname" (value)="item.Name">{{item.name}}</option>
+                            <!-- <option>IT Department</option>
                             <option>HR Department</option>
                             <option>SUPPORT Department</option>
-                            <option>Sales and marketing (Business development)</option>
+                            <option>Sales and marketing (Business development)</option> -->
                         </select>
                 </div>
                 <div class="employment-btns">

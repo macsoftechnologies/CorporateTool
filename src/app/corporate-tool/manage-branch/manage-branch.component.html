@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-lg-12">
       <div class="card-body">
-        <form class="form">
+        <form class="form" [formGroup]="myform" (ngSubmit)=onSubmit()>
            <div class="row">
             <div class="col-lg-6 col-md-6 col-sm-12">
               <div class="form-group">
@@ -13,7 +13,7 @@
                             <i class="fa fa-university"></i>
                         </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Branch Name" aria-label="Username" aria-describedby="basic-addon11">
+                    <input type="text" class="form-control" formControlName="branchname" placeholder="Branch Name" aria-label="Username" aria-describedby="basic-addon11">
                 </div>
             </div>
             </div>

@@ -2,7 +2,7 @@
   <div class="col-md-12">
     <!-- <div class="card"> -->
         <div class="card-body">
-            <form class="form">
+            <form class="form" [formGroup]="myform" (ngSubmit)=onSubmit()>
                 <div class="form-group">
                     <!-- <label>Name</label> -->
                     <div class="input-group mb-3">
@@ -11,7 +11,7 @@
                                 <i class="ti-user"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Department Name" aria-label="Username" aria-describedby="basic-addon11">
+                        <input type="text" class="form-control" formControlName="DepartmentName" placeholder="Department Name" aria-label="Username" aria-describedby="basic-addon11">
                     </div>
                 </div>
                 <div class="form-group">
@@ -22,18 +22,18 @@
                                 <i class="icon-note"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Depart Description" aria-label="deaprtdesc" aria-describedby="basic-addon22">
+                        <input type="text" class="form-control" formControlName="DepartmentDescription" placeholder="Department Description" aria-label="deaprtdesc" aria-describedby="basic-addon22">
                     </div>
                 </div>
                 <div class="form-group">
                       <!-- <label>Branch</label> -->
-                        <select class="form-control custom-select">
-                            <option>--Select your Branch--</option>
-                            <option>India</option>
+                        <select class="form-control custom-select" formControlName="BranchName">
+                            <option *ngFor="let item of branchname" (value)="item.name">{{item.name}}</option>
+                            <!-- <option>India</option>
                             <option>UK</option>
                             <option>USA</option>
                             <option>Vizag</option>
-                            <option>Hyderbad</option>
+                            <option>Hyderbad</option> -->
                         </select>
                 </div>
                 <div class="employment-btns">
