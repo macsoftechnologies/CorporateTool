@@ -71,28 +71,18 @@ export const ROUTES: RouteInfo[] = [
             submenu: []
           },
           {
-            path: '/corporateTool/managegrades',
-            title: 'Manage Grades',
-            icon: '',
-            class: '',
-            label: '',
-            labelClass: '',
-            extralink: false,
-            submenu: []
-          },
-          {
-            path: '/corporateTool/managedesignations',
-            title: 'Manage Designations',
-            icon: '',
-            class: '',
-            label: '',
-            labelClass: '',
-            extralink: false,
-            submenu: []
-          },
-          {
             path: '/corporateTool/manageteams',
             title: 'Manage Teams',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          {
+            path: '/corporateTool/managegrades',
+            title: 'Manage Grades',
             icon: '',
             class: '',
             label: '',
@@ -110,6 +100,18 @@ export const ROUTES: RouteInfo[] = [
             extralink: false,
             submenu: []
           },
+          {
+            path: '/corporateTool/managedesignations',
+            title: 'Manage Designations',
+            icon: '',
+            class: '',
+            label: '',
+            labelClass: '',
+            extralink: false,
+            submenu: []
+          },
+          
+          
         ]
       },
       {
