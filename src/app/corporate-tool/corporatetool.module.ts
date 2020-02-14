@@ -24,6 +24,8 @@ import { MasterManageDesignationsComponent } from './master-manage-designations/
 import { MasterManageTeamsComponent } from './master-manage-teams/master-manage-teams.component';
 import { MasterManageBandsComponent } from './master-manage-bands/master-manage-bands.component';
 import { CompanyPreferencesComponent } from './company-preferences/company-preferences.component';
+import { ToastrModule} from 'ngx-toastr';
+// import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -33,7 +35,10 @@ import { CompanyPreferencesComponent } from './company-preferences/company-prefe
     NgbModule,
     FormsModule,
     CommonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    ToastrModule,
+    ToastrModule.forRoot()
+    // BrowserAnimationsModule
 ],
 declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent, ManagePersonalDetailsComponent, ManagePreferencesComponent, ManageEmploymentComponent, ManagePassportDetailsComponent, ManageLoyaltyMembershipsComponent, TravelPolicyComponent, ManageCompanySubComponent, ManageBranchComponent, MasterManageDepartmentComponent, MasterManageGradesComponent, MasterManageDesignationsComponent, MasterManageTeamsComponent, MasterManageBandsComponent, CompanyPreferencesComponent]
 })

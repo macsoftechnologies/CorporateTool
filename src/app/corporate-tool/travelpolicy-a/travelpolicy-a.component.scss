@@ -24,11 +24,44 @@
         width: 25%;
     }
 }
+.custom-select-block  {
+    .customselect {
+        &:nth-child(1) {
+            width: 15%;
+        }
+        &:nth-child(2) {
+            width: 20%;
+            span {
+                width: 75%;
+            }
+        }
+        &:nth-child(3) {
+            width: 65%;
+            select {
+                width: 20%;
+            }
+            span {
+                width: 75%;
+                input {
+                    width: 30%;
+                }
+            }
+        }
+    }
+    
+}
+.flight-custom-select-select-single {
+    .flightcustomselect {
+        span {
+            width: 35%;
+        }
+    }
+}
 .customselect{
     display: flex;
     align-items: baseline;
  .custom-select{
-   max-width: 14%;
+//    max-width: 14%;
    font-size: 13px;
    margin-top: 10px;
    margin-right: 5px;}

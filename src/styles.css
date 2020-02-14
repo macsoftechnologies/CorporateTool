@@ -8,3 +8,8 @@
   left: 3px;
   right: auto;
 }
+
+#toast-container > div {
+  opacity:1!important;
+  background-color: #2196f3;
+}
