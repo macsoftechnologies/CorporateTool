@@ -1,6 +1,7 @@
 <div class="card body-padding">
   <div id="test-l-1" class="content">
     <h4  class="text-primary mt-3">Details</h4><hr>
+       <form class="form" [formGroup]="myform" (ngSubmit)="onSubmit()">
             <div class="row mt-3">
               <div class="col-lg-6 col-md-6 col-sm-12">
                 <div class="form-group">
@@ -11,7 +12,7 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="User Name" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="username" placeholder="User Name" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
               </div>
@@ -24,8 +25,8 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <select class="form-control" id="city" name="city">
-                          <option>--select Title--</option>
+                        <select class="form-control" id="title" formControlName="title">
+                          <option *ngFor="let item of selecttitle" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
                           <option>London</option>
@@ -46,7 +47,7 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="First Name" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="firstname" placeholder="First Name" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
               </div>
@@ -59,7 +60,7 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Last Name" aria-label="Username" aria-describedby="basic-addon11">
+                        <input type="text" class="form-control" formControlName="lastname" placeholder="Last Name" aria-label="Username" aria-describedby="basic-addon11">
                       </div>
                 </div>
               </div>
@@ -75,8 +76,8 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <select class="form-control" id="city" name="city">
-                        <option>--select User Role--</option>
+                      <select class="form-control" id="city" formControlName="userrole">
+                        <option *ngFor="let item of role" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
                         <option>London</option>
@@ -95,8 +96,8 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <select class="form-control" id="city" name="city">
-                          <option>--select Gender--</option>
+                        <select class="form-control" id="city" formControlName="gender">
+                          <option *ngFor="let item of selectgender" (value)="item.name">{{item.name}}</option>
                           <option>Male</option>
                           <option>Female</option>
                           
@@ -115,8 +116,8 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <select class="form-control" id="city" name="city">
-                        <option>--select Team--</option>
+                      <select class="form-control" id="city" formControlName="teams">
+                        <option *ngFor="let item of team" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
                         <option>London</option>
@@ -135,7 +136,7 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <input type="date" class="form-control" placeholder="DOB" aria-label="DOB" aria-describedby="basic-addon11">
+                        <input type="date" class="form-control" formControlName="dob" placeholder="DOB" aria-label="DOB" aria-describedby="basic-addon11">
                     </div>
                 </div>
               </div>
@@ -150,8 +151,8 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <select class="form-control" id="city" name="city">
-                        <option>--select Job Title--</option>
+                      <select class="form-control" id="city" formControlName="jobtitle">
+                        <option *ngFor="let item of selectjobtitle" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
                         <option>London</option>
@@ -170,8 +171,8 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <select class="form-control" id="city" name="city">
-                          <option>--select Marital Status--</option>
+                        <select class="form-control" id="city" formControlName="maritalstatus">
+                          <option *ngFor="let item of selectmaritalstatus" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
                           <option>London</option>
@@ -192,8 +193,8 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <select class="form-control" id="city" name="city">
-                        <option>--Select Department--</option>
+                      <select class="form-control" id="city" formControlName="department">
+                        <option *ngFor="let item of departmentname" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
                         <option>London</option>
@@ -212,8 +213,8 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <select class="form-control" id="city" name="city">
-                          <option>--Select Grade--</option>
+                        <select class="form-control" id="city" formControlName="grade">
+                          <option *ngFor="let item of selectgrade" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
                           <option>London</option>
@@ -235,7 +236,7 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Primary Email" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="primaryemail" placeholder="Primary Email" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
               </div>
@@ -248,7 +249,7 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Personal Email" aria-label="Username" aria-describedby="basic-addon11">
+                        <input type="text" class="form-control" formControlName="personalemail" placeholder="Personal Email" aria-label="Username" aria-describedby="basic-addon11">
                       </div>
                 </div>
               </div>
@@ -263,7 +264,7 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Residence No  Example : 080 25252525" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="residenceno" placeholder="Residence No  Example : 080 25252525" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
               </div>
@@ -276,7 +277,7 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Mobile No" aria-label="Username" aria-describedby="basic-addon11">
+                        <input type="text" class="form-control" formControlName="mobileno" placeholder="Mobile No" aria-label="Username" aria-describedby="basic-addon11">
                       </div>
                 </div>
               </div>
@@ -292,7 +293,7 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="fullname" placeholder="Full Name" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
               </div>
@@ -305,8 +306,8 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <select class="form-control" id="city" name="city">
-                          <option>--Select RelationShip--</option>
+                        <select class="form-control" id="city" formControlName="relationship">
+                          <option *ngFor="let item of selectrelationship" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
                           <option>London</option>
@@ -327,7 +328,7 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Contact Email" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="contactemail" placeholder="Contact Email" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
               </div>
@@ -340,14 +341,15 @@
                                 <i class="fa fa-phone"></i>
                             </span>
                         </div>
-                        <input type="text" class="form-control" placeholder="Mobile No" aria-label="Username" aria-describedby="basic-addon11">
+                        <input type="text" class="form-control" formControlName="contactno" placeholder="Mobile No" aria-label="Username" aria-describedby="basic-addon11">
                       </div>
                 </div>
               </div>
             </div>
             <div class="employment-btns">
-              <button (click)="next()" class="btn btn-outline-primary" type="button">Next</button>
+              <button type="submit" (click)="showtoastr()"  class="btn btn-outline-primary">Next</button>
             </div>
+          </form>
   </div>
 </div>
 

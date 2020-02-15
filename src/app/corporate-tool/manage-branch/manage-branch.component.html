@@ -26,7 +26,7 @@
                               <i class="fa fa-envelope-o"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Enter Your Email" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="email" placeholder="Enter Your Email" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
             </div>
@@ -41,7 +41,7 @@
                             <i class="fa fa-address-card"></i>
                         </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Branch Address" aria-label="Username" aria-describedby="basic-addon11">
+                    <input type="text" class="form-control" formControlName="address" placeholder="Branch Address" aria-label="Username" aria-describedby="basic-addon11">
                 </div>
             </div>
             </div>
@@ -54,7 +54,7 @@
                               <i class="fa fa-address-card"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Address Line2" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="addressline2" placeholder="Address Line2" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
             </div>
@@ -69,13 +69,13 @@
                             <i class="fa fa-plane"></i>
                         </span>
                     </div>
-                    <select class="form-control" id="country" name="country">
-                      <option>--select Country--</option>
-                      <option>India</option>
+                    <select class="form-control" id="country" formControlName="country">
+                      <option *ngFor="let item of selectyourcountry" (value)="item.name">{{item.name}}</option>
+                      <!-- <option>India</option>
                       <option>US</option>
                       <option>UK</option>
                       <option>DXB</option>
-                      <option>China</option>
+                      <option>China</option> -->
                       </select>
                     </div>
             </div>
@@ -89,13 +89,13 @@
                               <i class="fa fa-road"></i>
                           </span>
                       </div>
-                      <select class="form-control" id="city" name="city">
-                        <option>--select city--</option>
-                        <option>Banglore</option>
+                      <select class="form-control" id="city" formControlName="city">
+                        <option *ngFor="let item of selectyourcity" (value)="item.name">{{item.name}}</option>
+                        <!-- <option>Banglore</option>
                         <option>Newyork</option>
                         <option>London</option>
                         <option>Dubai</option>
-                        <option>Shanghai</option>
+                        <option>Shanghai</option> -->
                         </select>
                       </div>
               </div>
@@ -111,7 +111,7 @@
                             <i class="fa fa-address-card"></i>
                         </span>
                     </div>
-                    <input type="text" class="form-control" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon11">
+                    <input type="text" class="form-control" formControlName="pincode" placeholder="Pin Code" aria-label="Username" aria-describedby="basic-addon11">
                 </div>
             </div>
             </div>
@@ -124,7 +124,7 @@
                               <i class="fa fa-phone"></i>
                           </span>
                       </div>
-                      <input type="text" class="form-control" placeholder="Contact No" aria-label="Username" aria-describedby="basic-addon11">
+                      <input type="text" class="form-control" formControlName="contactno" placeholder="Contact No" aria-label="Username" aria-describedby="basic-addon11">
                   </div>
               </div>
             </div>
@@ -139,10 +139,11 @@
                             <i class="fa fa-check-square-o"></i>
                         </span>
                     </div>
-                    <select class="form-control" id="cost-center-decision" name="decisioncost">
-                      <option>--Select is Cost center--</option>
+                    <select class="form-control" id="cost-center-decision" formControlName="decisioncost">
+                      <option *ngFor="let item of selectiscostcenter" (value)="item.name">{{item.name}}</option>
+                      <!-- <option>--Select is Cost center--</option>
                       <option>Yes</option>
-                      <option>No</option>
+                      <option>No</option> -->
                       </select>
                     </div>
             </div>
@@ -156,12 +157,12 @@
                               <i class="fa fa-plane"></i>
                           </span>
                       </div>
-                      <select class="form-control" id="cost-center" name="cost-center" disabled>
-                        <option>--select Cost Center?--</option>
-                        <option>Newyork</option>
+                      <select class="form-control" id="cost-center" formControlName="costcenter" disabled>
+                        <option *ngFor="let item of selectcostcenter" (value)="item.name">{{item.name}}</option>
+                        <!-- <option>Newyork</option>
                         <option>London</option>
                         <option>Dubai</option>
-                        <option>Shanghai</option>
+                        <option>Shanghai</option> -->
                         </select>
                     </div>
               </div>

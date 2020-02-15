@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-master-manage-department',
@@ -9,7 +10,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 export class MasterManageDepartmentComponent implements OnInit {
 
-  constructor( private service: ServiceService) { }
+  constructor( private service: ServiceService, private toastr:ToastrService) { }
   branchname=[]
   myform = new FormGroup({
     DepartmentName: new FormControl("",Validators.required),
@@ -30,6 +31,9 @@ export class MasterManageDepartmentComponent implements OnInit {
 
   ngOnInit() {
     this.branchname=this.service.managebranch
+  }
+  showToaster(){
+    this.toastr.success("Department created Successfully");
   }
 
 }

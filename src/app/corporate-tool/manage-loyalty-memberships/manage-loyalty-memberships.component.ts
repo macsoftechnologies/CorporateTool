@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-manage-loyalty-memberships',
@@ -19,23 +19,47 @@ export class ManageLoyaltyMembershipsComponent implements OnInit {
     
   ]
   page=1;
-
-  flightloyaltycards= new FormGroup({
-    airline: new FormControl(this.selectairline[0].name,Validators.required),
-    cardnumber:new FormControl("",Validators.required)
-  })
-
-  constructor() { }
-  onsubmit(){
-    this.loyaltycardobject=this.flightloyaltycards.value
-    this.loyaltycarddetails.push(this.loyaltycardobject);
+  flightloyaltycards: FormGroup;
+  submitted =false;
+  constructor( private fb:FormBuilder) { 
+    this.flightloyaltycards= this.fb.group({
+      airline: [null,Validators.required],
+      cardnumber:["",Validators.required]
+    })
+  }
+  
+ get f(){ return this.flightloyaltycards.controls}
+  
+  onSubmit(){
+    this.submitted=false;
+    if(this.flightloyaltycards.valid){
+      this.submitted=true
+    }else
+    {
+      return;
+    }
+    this.loyaltycarddetails.push({airline:this.flightloyaltycards.value.airline,cardnumber:this.flightloyaltycards.value.cardnumber})
+    // this.loyaltycardobject=this.flightloyaltycards.value
+    // this.loyaltycarddetails.push(this.loyaltycardobject);
+    this.flightloyaltycards.reset();
+    // this.resetForm(this.flightloyaltycards);
+    
     this.flightloyaltycards.patchValue({
-      airline:this.selectairline[0].name,
-      cardnumber:null,
+      // airline:null,
+      // cardnumber:null,
     })
     
     
   }
+  // resetForm(form: FormGroup) {
+	// 	form.reset();
+	// }
+  delete(p){
+    let index = this.loyaltycarddetails.indexOf(p);
+    this.loyaltycarddetails.splice(index, 1);
+  }
+
+  
 
   ngOnInit() {
   }

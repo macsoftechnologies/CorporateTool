@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ServiceService } from '../service.service';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-master-manage-teams',
@@ -8,10 +10,29 @@ import { ServiceService } from '../service.service';
 })
 export class MasterManageTeamsComponent implements OnInit {
   departmentname=[]
-  constructor( public service:ServiceService) { }
+  constructor( public service:ServiceService,private toastr:ToastrService) { }
+  
+ myform = new FormGroup({
+  teamname: new FormControl("",Validators.required),
+  teamdescription: new FormControl("",Validators.required),
+  selectdepartment : new FormControl("this.departmentname[0].name",Validators.required)
+
+})
+onSubmit(){
+  this.service.team.push({name:this.myform.value.teamname})
+  this.myform.patchValue({
+    teamname:null,
+    teamdescription:null,
+    selectdepartment:this.departmentname[0].name
+  })
+}
  
   ngOnInit() {
    this.departmentname=this.service.departmentname
   }
+  showToaster(){
+    this.toastr.success("Team has been  created Successfully");
+  }
+
 
 }

@@ -24,6 +24,9 @@
         .pagination {
             justify-content: center;
         }
+        .form-group {
+            margin-bottom: 0px;
+        }
     }  
 }
 @media (max-width:768px) {
@@ -46,6 +49,9 @@
     ::ng-deep {
         .container-fluid {
             padding: 0 15px 25px;
+        }
+        .form-group {
+            margin-bottom: 0px;
         }
     }
 }

@@ -1,7 +1,7 @@
 <div class="card body-padding">
   <div id="test-l-5" class="content">
     <h4 class="text-primary mt-3">Flight Loyalty Cards</h4><hr>
-    <form [formGroup]="flightloyaltycards" (ngSubmit)="onsubmit()">
+    <form [formGroup]="flightloyaltycards" (ngSubmit)="onSubmit()">
     <div class="row">
       <div class="col-lg-6 col-md-6 col-sm-12">
         <div class="form-group">
@@ -15,7 +15,17 @@
               <!-- <input type="text" class="form-control" [(ngModel)]="airline" placeholder="Airline" aria-label="Username" aria-describedby="basic-addon11"> -->
               <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
                 <!-- <option>----Select Airline---</option>   -->
-                <option *ngFor="let item of selectairline" (value)="item.name" >{{item.name}}</option>
+                <option [ngValue]="null" disabled>Choose your profile</option>
+                <option *ngFor="let item of selectairline" [ngValue]="item.name" >{{item.name}}</option>
+                <!-- <div *ngIf="submitted && f.airline.errors" class="text-danger">
+                  <div *ngIf="f.airline.errors.required">Plz Select Airline Name</div>
+                </div> -->
+                <!-- <div class="invalid-feedback" *ngIf="submitted && f.airline.errors.required">
+                  <sup>*</sup>Please enter your city name
+               </div> -->
+                <!-- <div *ngIf="f.airline.invalid && f.dirty" class="error">
+                  Profile required.
+                </div> -->
                 
               </select>                 
             </div>
@@ -31,6 +41,9 @@
                     </span>
                 </div>
                 <input type="number" class="form-control" formControlName="cardnumber" placeholder="Card Number" aria-label="Username" aria-describedby="basic-addon11">
+              </div>
+              <div *ngIf="submitted && f.cardnumber.errors" class="text-danger">
+                <div *ngIf="f.cardnumber.errors.required">Please Enter Your Card Number</div>
               </div>
         </div>
       </div>
@@ -55,7 +68,7 @@
          <td class="edit-btns">
            <a href="#" ngbTooltip="Enable" class=" mr-2"><i class="fa fa-check"></i></a>
            <a href="#" ngbTooltip="Disable" class=" mr-2"><i class="fa fa-times"></i></a>
-           <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+           <a  ngbTooltip="Delete" (click)="delete(items)" class=" mr-2"><i class="fa fa-trash-o"></i></a>
         </td>
         </tr>
       </tbody>
