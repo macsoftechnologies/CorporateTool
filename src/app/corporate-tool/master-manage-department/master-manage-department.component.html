@@ -1,41 +1,45 @@
-<div class="card">
+<div class="card card-position">
   <div class="col-md-12">
     <!-- <div class="card"> -->
         <div class="card-body">
             <form class="form" [formGroup]="myform" (ngSubmit)=onSubmit()>
-                <div class="form-group">
-                    <!-- <label>Name</label> -->
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon11">
-                                <i class="ti-user"></i>
-                            </span>
+                    <div class="form-group">
+                        <!-- <label>Name</label> -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon11">
+                                    <i class="ti-user"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" formControlName="DepartmentName" placeholder="Department Name" aria-label="Username" aria-describedby="basic-addon11">
                         </div>
-                        <input type="text" class="form-control" formControlName="DepartmentName" placeholder="Department Name" aria-label="Username" aria-describedby="basic-addon11">
                     </div>
-                </div>
-                <div class="form-group">
-                    <!-- <label for="departdesc">Description</label> -->
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon22">
-                                <i class="icon-note"></i>
-                            </span>
+                    <div class="form-group">
+                        <!-- <label for="departdesc">Description</label> -->
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="basic-addon22">
+                                    <i class="icon-note"></i>
+                                </span>
+                            </div>
+                            <input type="text" class="form-control" formControlName="DepartmentDescription" placeholder="Department Description" aria-label="deaprtdesc" aria-describedby="basic-addon22">
                         </div>
-                        <input type="text" class="form-control" formControlName="DepartmentDescription" placeholder="Department Description" aria-label="deaprtdesc" aria-describedby="basic-addon22">
-                    </div>
+                    
                 </div>
-                <div class="form-group">
-                      <!-- <label>Branch</label> -->
-                        <select class="form-control custom-select" formControlName="BranchName">
-                            <option *ngFor="let item of branchname" (value)="item.name">{{item.name}}</option>
-                            <!-- <option>India</option>
-                            <option>UK</option>
-                            <option>USA</option>
-                            <option>Vizag</option>
-                            <option>Hyderbad</option> -->
-                        </select>
-                </div>
+                <!-- <div class="row"> -->
+                    <div class="form-group">
+                        <!-- <label>Branch</label> -->
+                          <select class="form-control custom-select" formControlName="BranchName">
+                              <option *ngFor="let item of branchname" (value)="item.name">{{item.name}}</option>
+                              <!-- <option>India</option>
+                              <option>UK</option>
+                              <option>USA</option>
+                              <option>Vizag</option>
+                              <option>Hyderbad</option> -->
+                          </select>
+                  </div>
+                <!-- </div> -->
+                
                 <div class="employment-btns">
                     <button type="submit" (click)="showToaster()" class="btn btn-outline-primary m-r-10">Create</button>
                     <button type="button" class="btn btn-outline-primary">Reset</button>

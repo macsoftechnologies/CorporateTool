@@ -26,6 +26,7 @@
         
     }
     
+    
     @media (max-width:768px) {
         .card-body {
             font-size: 12px;
@@ -57,4 +58,8 @@
             }
         }
     }
+}
+.card-position {
+    width: 50%;
+    margin: auto;
 }

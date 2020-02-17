@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-adminpermissions',
   templateUrl: './adminpermissions.component.html',
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminpermissionsComponent implements OnInit {
 
+
   constructor() { }
 
   ngOnInit() {
+    
   }
   admin=[
     {id:1,name:"Manage Company"},

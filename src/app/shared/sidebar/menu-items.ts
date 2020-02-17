@@ -1,7 +1,7 @@
 import { RouteInfo } from './sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
-  {
+ /*  {
     path: '',
     title: 'Personal',
     icon: '',
@@ -10,7 +10,7 @@ export const ROUTES: RouteInfo[] = [
     labelClass: '',
     extralink: true,
     submenu: []
-  },
+  }, */
   {
     path: '',
     title: 'CorporateTool',
@@ -177,7 +177,6 @@ export const ROUTES: RouteInfo[] = [
           },
         ]
       },
-
       {
         path: '/corporateTool/permissions',
         title: 'Permissions',
@@ -196,7 +195,7 @@ export const ROUTES: RouteInfo[] = [
             labelClass: '',
             extralink: false,
             submenu: []
-          },
+          }
         ]
       },
       {
