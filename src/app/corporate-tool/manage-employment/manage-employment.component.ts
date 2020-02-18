@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-employment',
@@ -7,15 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManageEmploymentComponent implements OnInit {
 
-  constructor() { }
+  constructor( private router:Router) { }
 
   ngOnInit() {
   }
 
-  public previous(){
-
+  previous(){
+    this.router.navigateByUrl("/corporateTool/managepreferences")
+    // this.toastr.success("Preference has been completed successfully")
   }
-  public next(){
+  next(){
+    this.router.navigateByUrl("/corporateTool/managepassportdetails")
     
   }
 

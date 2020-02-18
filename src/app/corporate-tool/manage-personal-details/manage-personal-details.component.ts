@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ServiceService } from '../service.service';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-personal-details',
@@ -45,7 +46,7 @@ export class ManagePersonalDetailsComponent implements OnInit {
 
   ]
 
-  constructor( private service:ServiceService,private toastr:ToastrService) { }
+  constructor( private service:ServiceService,private toastr:ToastrService,private router:Router) { }
   myform= new FormGroup({
     username: new FormControl("", Validators.required),
     title : new FormControl("this.selecttitle[0].name",[Validators.required]),
@@ -108,6 +109,7 @@ export class ManagePersonalDetailsComponent implements OnInit {
   }
   showtoastr(){
     this.toastr.success("Personal Details Has Been Created")
+    this.router.navigateByUrl('/corporateTool/managepreferences')
   }
 
 }

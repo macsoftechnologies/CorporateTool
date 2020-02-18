@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-manage-preferences',
@@ -7,15 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ManagePreferencesComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr:ToastrService,private router:Router) { }
 
   ngOnInit() {
   }
 
-  public previous(){
-
+  previous(){
+    this.router.navigateByUrl("/corporateTool/managepersonaldetails")
+    // this.toastr.success("Preference has been completed successfully")
   }
-  public next(){
+  next(){
+    this.router.navigateByUrl("/corporateTool/manageemployment")
     
   }
 
