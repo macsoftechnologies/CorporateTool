@@ -30,7 +30,8 @@
                     <div class="form-group">
                         <!-- <label>Branch</label> -->
                           <select class="form-control custom-select" formControlName="BranchName">
-                              <option *ngFor="let item of branchname" (value)="item.name">{{item.name}}</option>
+                            <option [ngValue]="null" disabled>Select Your Branch</option>
+                            <option *ngFor="let item of branchname" [ngValue]="item.name">{{item.name}}</option>
                               <!-- <option>India</option>
                               <option>UK</option>
                               <option>USA</option>

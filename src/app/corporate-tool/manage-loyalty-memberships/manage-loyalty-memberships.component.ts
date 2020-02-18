@@ -12,7 +12,6 @@ export class ManageLoyaltyMembershipsComponent implements OnInit {
   
   loyaltycardobject={};
   selectairline=[
-    {id:1,name:"Selected Airline"},
     {id:2,name:"visakhaptnam"},
     {id:2,name:"hyderbad"},
     {id:3,name:"usa"},
@@ -46,17 +45,21 @@ export class ManageLoyaltyMembershipsComponent implements OnInit {
     // this.loyaltycardobject=this.flightloyaltycards.value
     // this.loyaltycarddetails.push(this.loyaltycardobject);
     
-    // this.resetForm(this.flightloyaltycards);
+    this.resetForm(this.flightloyaltycards);
     
     }
-    this.flightloyaltycards.reset();
+    // this.flightloyaltycards.reset();
 }
-  // resetForm(form: FormGroup) {
-	// 	form.reset();
-	// }
+  resetForm(form) {
+    form.reset();
+    this.submitted=false
+	}
   delete(p){
     let index = this.loyaltycarddetails.indexOf(p);
     this.loyaltycarddetails.splice(index, 1);
+    
+       
+     
   }
   // showtoastr(){
   //   this.toastr.success("Loyality Membership has been added Successfully")
