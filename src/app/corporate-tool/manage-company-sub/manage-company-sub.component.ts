@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -11,7 +12,9 @@ import { ToastrService } from 'ngx-toastr';
 export class ManageCompanySubComponent implements OnInit {
 
   
-  constructor(private toastr : ToastrService) { }
+  constructor(private toastr : ToastrService,
+    private router:Router
+    ) { }
   selectyourcountry=[
     {name:"Select Your Country"},
     {name:"India"},
@@ -55,6 +58,8 @@ export class ManageCompanySubComponent implements OnInit {
   }
   showToaster() {
     this.toastr.success("Company Updated Successfully");
+    this.router.navigateByUrl("/corporateTool/managebranch")
+    
   }
 
   ngOnInit() {
