@@ -17,6 +17,7 @@
                 <div class="form-group">
                   <!-- <label>Department</label> -->
                     <select class="form-control custom-select" formControlName="selectdepartment">
+                        <option [ngValue]="null" disabled>Select Your Department Name</option>
                         <option *ngFor="let item of departmentname" (value)="item.name">{{item.name}}</option>
                             <!-- <option>IT Department</option>
                             <option>HR Department</option>
@@ -31,6 +32,7 @@
                 <div class="form-group">
                       <!-- <label>Grade</label> -->
                         <select class="form-control custom-select" formControlName="selectgrade">
+                            <option [ngValue]="null" disabled>Select Your Grade Name</option>
                             <option *ngFor="let item of grade" (value)="item.Name">{{item.name}}</option>
                             <!-- <option>Senior Manager </option>
                             <option>Assistent Manager</option>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 
 @Component({
@@ -9,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class AdminpermissionsComponent implements OnInit {
 
 
-  constructor() { }
+  constructor(private toastr:ToastrService) { }
 
   ngOnInit() {
     
@@ -29,5 +30,8 @@ export class AdminpermissionsComponent implements OnInit {
     {id:12,name:"Can Book For Guest User"},
     {id:13,name:"Unlock User"},
 ]
+showtoastr(){
+  this.toastr.success("Admin has been saved Successfully")
+}
 
 }

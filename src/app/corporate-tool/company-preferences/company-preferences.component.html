@@ -10,7 +10,7 @@
             </ng-template>
             
 						<ng-template ngbPanelContent>
-              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit(PreferredAirlines)">
+              <form [formGroup]="PreferredAirlines" (ngSubmit)="onsubmit()">
                   <div class="form-group">
                     <div class="row">
                       <div class="col-lg-10 col-md-10">
@@ -21,14 +21,15 @@
                             </span>
                         </div>
                         <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
-                          <option *ngFor="let item of selectairline let i=index" (value)="item.airlinename">{{item.airlinename}}</option>
+                          <option [ngValue]="null" disabled>Select your Airline</option>
+                          <option *ngFor="let item of selectairline let i=index" [ngValue]="item">{{item.airlinename}}</option>
                         </select>
             
                         
                       </div>
                     </div>
                     <div class="col-lg-2 col-md-2 employment-btns">
-                      <input type="submit" class="btn btn-outline-primary" value="Add">
+                      <input type="submit" (click)="preferredairline()" class="btn btn-outline-primary" value="Add">
                     </div>
                   </div>
                 </div>
@@ -50,10 +51,10 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let items of PreferredAirlinesarray">
-                  <td>{{items.code}}</td>
-                  <td>{{items.airline}}</td>
+                  <td>{{items.airline.code}}</td>
+                  <td>{{items.airline.airlinename}}</td>
                   <td class="edit-btns">
-                    <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                    <a  ngbTooltip="Delete" (click)="delete(items)" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                   </td>
                   </tr>
                 </tbody>
@@ -87,12 +88,13 @@
                             </span>
                         </div>
                         <select class="form-control" formControlName="airline" id="city" name="city" placeholder="Select Airline">
-                          <option *ngFor="let item of selectExcludedAirlines" (value)="item.airlinename" >{{item.airlinename}}</option>
+                          <option [ngValue]="null" disabled>Select your Airline</option>
+                          <option *ngFor="let item of selectExcludedAirlines" [ngValue]="item" >{{item.airlinename}}</option>
                         </select>
                       </div>
                     </div>
                     <div class="col-lg-2 col-md-2 employment-btns">
-                      <input type="submit" class="btn btn-outline-primary" value="Add">
+                      <input type="submit" (click)="excludedairline()" class="btn btn-outline-primary" value="Add">
                     </div>
                   </div>
                 </div>
@@ -113,10 +115,10 @@
                 </thead>
                 <tbody>
                   <tr *ngFor="let items of ExcludedAirlinesarray">
-                  <td>{{items.code}}</td>
-                  <td>{{items.airline}}</td>
+                  <td>{{items.airline.code}}</td>
+                  <td>{{items.airline.airlinename}}</td>
                   <td class="edit-btns">
-                    <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                    <a ngbTooltip="Delete" (click)="delete2(items)" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                   </td>
                   </tr>
                 </tbody>
@@ -149,12 +151,13 @@
                                 </span>
                             </div>
                             <select class="form-control" formControlName="hotelname" id="city" name="city" placeholder="Select Airline">
-                              <option *ngFor="let item of selecthotel" (value)="item.hotelname" >{{item.hotelname}}</option>
+                              <option [ngValue]="null" disabled>Select Hotel Name</option>
+                              <option *ngFor="let item of selecthotel" [ngValue]="item" >{{item.hotelname}}</option>
                             </select>
                           </div>
                         </div>
                         <div class="col-lg-2 col-md-2 employment-btns">
-                          <input type="submit" class="btn btn-outline-primary" value="Add">
+                          <input type="submit" (click)="hotel()" class="btn btn-outline-primary" value="Add">
                         </div>
                       </div>
                     </div>
@@ -175,10 +178,10 @@
                     </thead>
                     <tbody>
                       <tr *ngFor="let items of preferredHotelarray">
-                      <td>{{items.hotelname}}</td>
-                      <td>{{items.location}}</td>
+                      <td>{{items.hotelname.hotelname}}</td>
+                      <td>{{items.hotelname.location}}</td>
                       <td class="edit-btns">
-                        <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                        <a ngbTooltip="Delete" (click)="delete3(items)" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                       </td>
                       </tr>
                     </tbody>
@@ -211,12 +214,13 @@
                           </span>
                       </div>
                       <select class="form-control" formControlName="countryname" id="city" name="city" placeholder="Select Airline">
-                        <option *ngFor="let item of selectskipCountries" (value)="item.countryname" >{{item.countryname}}</option>
+                        <option [ngValue]="null" disabled>Select your Country Name</option>
+                        <option *ngFor="let item of selectskipCountries" [ngValue]="item" >{{item.countryname}}</option>
                       </select>
                     </div>
                   </div>
                   <div class="col-lg-2 col-md-2 employment-btns">
-                    <input type="submit" class="btn btn-outline-primary" value="Add">
+                    <input type="submit" (click)="country()" class="btn btn-outline-primary" value="Add">
                   </div>
                 </div>
               </div>
@@ -237,10 +241,10 @@
               </thead>
               <tbody>
                 <tr *ngFor="let items of skipCountriesarray">
-                <td>{{items.code}}</td>
-                <td>{{items.countryname}}</td>
+                <td>{{items.countryname.countrycode}}</td>
+                <td>{{items.countryname.countryname}}</td>
                 <td class="edit-btns">
-                  <a href="#" ngbTooltip="Delete" class=" mr-2"><i class="fa fa-trash-o"></i></a>
+                  <a  ngbTooltip="Delete" (click)="delete4(items)" class=" mr-2"><i class="fa fa-trash-o"></i></a>
                 </td>
                 </tr>
               </tbody>
@@ -277,9 +281,10 @@
       <div class="col-lg-4" >
         <div class="input-feild-checkbox mb-3">
           <div class="d-inline">
-          <label class="form-check-label-text" >Levels Of Approval
-            <input type="text" class="form-check-input " >
-            <!-- <span class="checkmark"></span> -->
+          <label class="form-check-label" >Levels Of Approval
+            <input type="checkbox" class="form-check-input " >
+            
+            <span class="checkmark"></span>
           </label>
         </div>
         </div>
@@ -287,9 +292,9 @@
       <div class="col-lg-4" >
         <div class="input-feild-checkbox mb-3">
           <div class="d-inline">
-          <label class="form-check-label-text" >Mins For Next Escalation
-            <input type="text" class="form-check-input " >
-            <!-- <span class="checkmark"></span> -->
+          <label class="form-check-label" >Mins For Next Escalation
+            <input type="checkbox" class="form-check-input " >
+            <span class="checkmark"></span>
           </label>
         </div>
         </div>
@@ -297,9 +302,9 @@
       <div class="col-lg-4  " >
         <div class="input-feild-checkbox mb-3">
           <div class="d-inline">
-          <label class="form-check-label-text" >Login Attempts
-            <input type="text" class="form-check-input " >
-            <!-- <span class="checkmark"></span> -->
+          <label class="form-check-label" >Login Attempts
+            <input type="checkbox" class="form-check-input " >
+             <span class="checkmark"></span> 
           </label>
         </div>
         </div>
@@ -307,10 +312,10 @@
       <div class="col-lg-4" >
         <div class="input-feild-checkbox mb-3">
           <div class="d-inline">
-          <label class="form-check-label-text" >Rebook Time Limit Hours
-            <input type="text" class="form-check-input" >
-            <!-- <span class="checkmark"></span> -->
-          </label>
+          <label class="form-check-label" >Rebook Time Limit Hours
+            <input type="checkbox" class="form-check-input " >
+            <span class="checkmark"></span>
+         </label>
         </div>
         </div>
       </div>
@@ -346,11 +351,10 @@
    </div>
    <hr>
    <div class="admin-btn text-right">
-    <button class="btn btn-primary">Update</button>
+    <button (click)="generalpreferrence()" class="btn btn-primary">Update</button>
    </div>
    <h4>Currency Change</h4>
    <div class="form-group">
-    <!-- <label>Preferred Meal</label> -->
     <div class="input-group mb-3">
         <div class="input-group-prepend">
             <span class="input-group-text" id="basic-addon14">
@@ -359,16 +363,16 @@
         </div>
         <select class="form-control" id="city" name="city">
           <option>--Select Currency--</option>
-          <!-- <option>Banglore</option>
-          <option>Newyork</option>
-          <option>London</option>
-          <option>Dubai</option>
-          <option>Shanghai</option> -->
+          <option>INR</option>
+          <option>Dollar</option>
+          <option>Pound</option>
+          <option>Euro</option>
+          <option>Cent</option>
           </select> 
       </div>
 </div>
    <div class="admin-btn text-right">
-     <button class="btn btn-primary">Update</button>
+     <button (click)="currency()" class="btn btn-primary">Update</button>
     </div>
   </div>
 </div>
@@ -420,7 +424,7 @@
     
    </div><hr>
    <div class="admin-btn text-right">
-    <button class="btn btn-primary">Update</button>
+    <button (click)="passportexpiredetilas()" class="btn btn-primary">Update</button>
    </div>
    <h4>Default Approver</h4><hr>  
    <div class="form-group">
@@ -461,7 +465,7 @@
     </div>
 </div>
    <div class="admin-btn text-right">
-     <button class="btn btn-primary">Update</button>
+     <button (click)="approver()" class="btn btn-primary">Update</button>
     </div>
   </div>
 </div>
@@ -500,7 +504,7 @@
     
    </div><hr>
    <div class="admin-btn text-right">
-     <button class="btn btn-primary">update</button>
+     <button (click)="authentication()" class="btn btn-primary">update</button>
     </div>
   </div>
 </div>

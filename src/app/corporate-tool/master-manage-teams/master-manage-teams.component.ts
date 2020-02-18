@@ -15,7 +15,7 @@ export class MasterManageTeamsComponent implements OnInit {
  myform = new FormGroup({
   teamname: new FormControl("",Validators.required),
   teamdescription: new FormControl("",Validators.required),
-  selectdepartment : new FormControl("this.departmentname[0].name",Validators.required)
+  selectdepartment : new FormControl(null,Validators.required)
 
 })
 onSubmit(){
@@ -23,7 +23,7 @@ onSubmit(){
   this.myform.patchValue({
     teamname:null,
     teamdescription:null,
-    selectdepartment:this.departmentname[0].name
+    selectdepartment:null,
   })
 }
  

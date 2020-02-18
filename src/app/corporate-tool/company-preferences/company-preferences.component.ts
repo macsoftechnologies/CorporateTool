@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup,  FormControl, Validators } from '@angular/forms';
 import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-company-preferences',
@@ -8,6 +9,7 @@ import { NgbPanelChangeEvent } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./company-preferences.component.scss']
 })
 export class CompanyPreferencesComponent implements OnInit {
+  constructor( private toastr:ToastrService) { }
   PreferredAirlinesobject={};
   PreferredAirlinesarray=[];
   ExcludedAirlinesobject={}
@@ -18,7 +20,6 @@ export class CompanyPreferencesComponent implements OnInit {
   skipCountriesarray=[]
   
   selectairline=[
-    {code:"sa",airlinename:"Select Airline Name"},
     {code:"AI",airlinename:"Air india"},
     {code:"IX",airlinename:"Air India Express"},
     {code:"QM",airlinename:"Air Malawi"},
@@ -27,7 +28,6 @@ export class CompanyPreferencesComponent implements OnInit {
 
   ];
   selectExcludedAirlines=[
-    {code:"sa",airlinename:"Select Airline Name"},
     {code:"AI",airlinename:"Air india"},
     {code:"IX",airlinename:"Air India Express"},
     {code:"QM",airlinename:"Air Malawi"},
@@ -50,19 +50,19 @@ export class CompanyPreferencesComponent implements OnInit {
 
   ]
   PreferredAirlines = new FormGroup({
-    airline : new FormControl(this.selectairline[0],Validators.required),
+    airline : new FormControl(null,Validators.required),
     
   });
   ExcludedAirlines= new FormGroup({
-    airline : new FormControl(this.selectExcludedAirlines[0],Validators.required),
+    airline : new FormControl(null,Validators.required),
     
   });
   PreferredHotels = new FormGroup({
-    hotelname : new FormControl(this.selecthotel[0],Validators.required),
+    hotelname : new FormControl(null,Validators.required),
     
   });
   skipCountries= new FormGroup({
-    countryname : new FormControl(this.selectskipCountries[0],Validators.required),
+    countryname : new FormControl(null,Validators.required),
     
   });
 
@@ -70,19 +70,19 @@ export class CompanyPreferencesComponent implements OnInit {
     this.PreferredAirlinesobject=this.PreferredAirlines.value;
     console.log(this.PreferredAirlinesobject)
     this.PreferredAirlinesarray.push(this.PreferredAirlinesobject);
+    console.log(this.PreferredAirlinesarray)
+
     this.PreferredAirlines.patchValue({
-      airline:this.selectairline[0].airlinename,
-      code:this.selectairline[0].code,
-      
-    })
-    
-    
-  };
+      airline:null,
+      code:null,
+     })
+    };
+
   onsubmit2(){
     this.ExcludedAirlinesobject=this.ExcludedAirlines.value;
     this.ExcludedAirlinesarray.push(this.ExcludedAirlinesobject);
     this.ExcludedAirlines.patchValue({
-      airline:this.selectExcludedAirlines[0].airlinename,
+      airline:null,
       
     })
   }
@@ -90,21 +90,74 @@ export class CompanyPreferencesComponent implements OnInit {
     this.preferredHotelObject=this.PreferredHotels.value;
     this.preferredHotelarray.push(this.preferredHotelObject);
     this.PreferredHotels.patchValue({
-      hotelname:this.selecthotel[0],
+      hotelname:null,
       
     })
   }
   onsubmit4(){
     this.skipCountriesobject=this.skipCountries.value;
     this.skipCountriesarray.push(this.skipCountriesobject);
-    this.skipCountries.patchValue({
-      countryname:this.selectskipCountries[0],
+    this.skipCountries.patchValue({ 
+      countryname:null,
       
     })
   }
 
+  delete(p){
+    let index = this.PreferredAirlinesarray.indexOf(p);
+    this.PreferredAirlinesarray.splice(index, 1);
+  
+    
+  }
+  delete2(p){
+    let index = this.ExcludedAirlinesarray.indexOf(p);
+    this.ExcludedAirlinesarray.splice(index, 1);
 
-  constructor() { }
+  }
+  delete3(p){
+    let index = this.preferredHotelarray.indexOf(p);
+    this.preferredHotelarray.splice(index, 1);
+
+  }
+  delete4(p){
+    let index = this.skipCountriesarray.indexOf(p);
+    this.skipCountriesarray.splice(index, 1);
+
+  }
+
+
+  preferredairline(){
+    this.toastr.success("preferred Airline List added")
+  }
+  excludedairline(){
+    this.toastr.success("Excluded Airline List added")
+  }
+  hotel(){
+    this.toastr.success("Hotelne List added")
+  }
+  country(){
+    this.toastr.success("Country List added")
+  }
+  generalpreferrence(){
+    this.toastr.success("General Preferrence has been Updated")
+  }
+  currency(){
+    this.toastr.success("Currency Has Been Updated")
+  }
+  passportexpiredetilas(){
+    this.toastr.success("Passport Expiry Details has Been updated")
+  }
+  approver(){
+    this.toastr.success("approver updated") 
+  
+  }
+  authentication(){
+   this.toastr.success("authentication updated") 
+  }
+
+
+
+  
 
   ngOnInit() {
   }

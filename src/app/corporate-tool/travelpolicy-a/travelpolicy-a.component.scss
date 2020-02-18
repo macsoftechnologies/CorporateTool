@@ -25,6 +25,7 @@
     }
 }
 .custom-select-block  {
+    display: flex;
     .customselect {
         &:nth-child(1) {
             width: 15%;

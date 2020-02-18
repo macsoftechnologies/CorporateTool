@@ -15,7 +15,7 @@ export class MasterManageDepartmentComponent implements OnInit {
   myform = new FormGroup({
     DepartmentName: new FormControl("",Validators.required),
     DepartmentDescription: new FormControl("",Validators.required),
-    BranchName : new FormControl("this.branchname[0].name",Validators.required)
+    BranchName : new FormControl(null,Validators.required)
 
   })
   onSubmit(){
@@ -25,7 +25,7 @@ export class MasterManageDepartmentComponent implements OnInit {
     this.myform.patchValue({
       DepartmentName:null,
       DepartmentDescription:null,
-      BranchName:this.branchname[0].name
+      BranchName:null
     })
   }
 

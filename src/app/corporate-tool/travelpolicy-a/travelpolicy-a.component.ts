@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-travelpolicy-a',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TravelpolicyAComponent implements OnInit {
 
-  constructor() { }
+  constructor(private toastr:ToastrService) { }
 
   ngOnInit() {
+  }
+  create(){
+    this.toastr.success("Policy Name has been Created")
+  }
+  update(){
+    this.toastr.success("Updateed Successfully")
   }
 
 }

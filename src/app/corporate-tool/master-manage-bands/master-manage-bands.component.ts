@@ -14,16 +14,16 @@ export class MasterManageBandsComponent implements OnInit {
   constructor( private service:ServiceService,private toastr:ToastrService) { }
   myform = new FormGroup({
     bandname: new FormControl("",Validators.required),
-    selectdepartment: new FormControl("this.departmentname[0].name",Validators.required),
-    selectgrade : new FormControl("this.grade[0].name",Validators.required)
+    selectdepartment: new FormControl(null,Validators.required),
+    selectgrade : new FormControl(null,Validators.required)
 
   })
   onSubmit(){
     this.service.role.push({name:this.myform.value.bandname})
     this.myform.patchValue({
       bandname:null,
-      selectdepartment:this.departmentname[0].name,
-      selectgrade:this.grade[0].name,
+      selectdepartment:null,
+      selectgrade:null,
     })
   }
   ngOnInit() {

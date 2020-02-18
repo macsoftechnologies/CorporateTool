@@ -26,6 +26,7 @@
                             </span>
                         </div>
                         <select class="form-control" id="title" formControlName="title">
+                          <option [ngValue]="null" disabled>Select Your Title</option>
                           <option *ngFor="let item of selecttitle" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
@@ -77,6 +78,7 @@
                           </span>
                       </div>
                       <select class="form-control" id="city" formControlName="userrole">
+                        <option [ngValue]="null" disabled>Select Your Role</option>
                         <option *ngFor="let item of role" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
@@ -97,6 +99,7 @@
                             </span>
                         </div>
                         <select class="form-control" id="city" formControlName="gender">
+                          <option [ngValue]="null" disabled>Select Your Gender</option>
                           <option *ngFor="let item of selectgender" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Male</option>
                           <option>Female</option> -->
@@ -117,6 +120,7 @@
                           </span>
                       </div>
                       <select class="form-control" id="city" formControlName="teams">
+                        <option [ngValue]="null" disabled>Select Your Team Name</option>
                         <option *ngFor="let item of team" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
@@ -152,6 +156,7 @@
                           </span>
                       </div>
                       <select class="form-control" id="city" formControlName="jobtitle">
+                        <option [ngValue]="null" disabled>Select Your Job Title</option>
                         <option *ngFor="let item of selectjobtitle" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
@@ -172,6 +177,7 @@
                             </span>
                         </div>
                         <select class="form-control" id="city" formControlName="maritalstatus">
+                          <option [ngValue]="null" disabled>Select Your Marital Status</option>
                           <option *ngFor="let item of selectmaritalstatus" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
@@ -194,6 +200,7 @@
                           </span>
                       </div>
                       <select class="form-control" id="city" formControlName="department">
+                        <option [ngValue]="null" disabled>Select Your Department Name</option>
                         <option *ngFor="let item of departmentname" (value)="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
@@ -214,6 +221,7 @@
                             </span>
                         </div>
                         <select class="form-control" id="city" formControlName="grade">
+                          <option [ngValue]="null" disabled>Select Your Grade</option>
                           <option *ngFor="let item of selectgrade" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
@@ -307,6 +315,7 @@
                             </span>
                         </div>
                         <select class="form-control" id="city" formControlName="relationship">
+                          <option [ngValue]="null" disabled>Select Your Relationship</option>
                           <option *ngFor="let item of selectrelationship" (value)="item.name">{{item.name}}</option>
                           <!-- <option>Banglore</option>
                           <option>Newyork</option>
@@ -347,7 +356,7 @@
               </div>
             </div>
             <div class="employment-btns">
-              <button type="submit" (click)="showtoastr()"  class="btn btn-outline-primary">Next</button>
+              <button type="submit" (click)="next()"  class="btn btn-outline-primary">Next</button>
             </div>
           </form>
   </div>

@@ -58,7 +58,7 @@ export class ManageCompanySubComponent implements OnInit {
   }
   showToaster() {
     this.toastr.success("Company Updated Successfully");
-    this.router.navigateByUrl("/corporateTool/managebranch")
+    // this.router.navigateByUrl("/corporateTool/managebranch")
     
   }
 
