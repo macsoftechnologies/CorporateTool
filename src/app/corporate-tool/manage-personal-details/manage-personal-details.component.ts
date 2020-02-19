@@ -95,7 +95,8 @@ export class ManagePersonalDetailsComponent implements OnInit {
     this.role=this.service.role;
     this.selectgrade=this.service.grade;
     this.departmentname=this.service.departmentname;
-    this.team=this.service.team
+    this.team=this.service.team;
+    this.selectjobtitle=this.service.teamname;
 
   }
 

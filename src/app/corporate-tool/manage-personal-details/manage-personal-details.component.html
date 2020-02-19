@@ -1,6 +1,6 @@
 <div class="card body-padding">
-  <div id="test-l-1" class="content">
-    <h4  class="text-primary mt-3">Details</h4><hr>
+  <div id="test-l-1" class="content ">
+    <!-- <h4  class="text-primary mt-3">Details</h4><hr> -->
        <form class="form" [formGroup]="myform" (ngSubmit)="onSubmit()">
             <div class="row mt-3">
               <div class="col-lg-6 col-md-6 col-sm-12">
@@ -157,7 +157,7 @@
                       </div>
                       <select class="form-control" id="city" formControlName="jobtitle">
                         <option [ngValue]="null" disabled>Select Your Job Title</option>
-                        <option *ngFor="let item of selectjobtitle" (value)="item.name">{{item.name}}</option>
+                        <option *ngFor="let item of selectjobtitle" [ngValue]="item.name">{{item.name}}</option>
                         <!-- <option>Banglore</option>
                         <option>Newyork</option>
                         <option>London</option>

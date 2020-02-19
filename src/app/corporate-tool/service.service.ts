@@ -11,6 +11,7 @@ export class ServiceService {
   grade=[]
   team=[]
   role=[]
+  teamname=[]
 }
 
 

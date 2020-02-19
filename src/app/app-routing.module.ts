@@ -8,9 +8,23 @@ import { BlankComponent } from './layouts/blank/blank.component';
 export const routes: Routes = [
   {
     path: '',
+    component: BlankComponent,
+    
+      children: [
+        { path: '', redirectTo: '/authentication/login', pathMatch: 'full' },
+  
+      {
+        path: 'authentication',
+        loadChildren:
+          './authentication/authentication.module#AuthenticationModule'
+      }
+    ] 
+  },
+  {
+    path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '/corporateTool/manageCompany', pathMatch: 'full' },
+     // { path: '', redirectTo: '/corporateTool/manageCompany', pathMatch: 'full' },
 
       {
         path:'corporateTool',
@@ -53,17 +67,17 @@ export const routes: Routes = [
       }
     ]
   },
-  {
-    path: '',
-    component: BlankComponent,
-    children: [
-      {
-        path: 'authentication',
-        loadChildren:
-          './authentication/authentication.module#AuthenticationModule'
-      }
-    ]
-  },
+  // {
+  //   path: '',
+  //   component: BlankComponent,
+  //   children: [
+  //     {
+  //       path: 'authentication',
+  //       loadChildren:
+  //         './authentication/authentication.module#AuthenticationModule'
+  //     }
+  //   ]
+  // },
   {
     path: '**',
     redirectTo: '404'
