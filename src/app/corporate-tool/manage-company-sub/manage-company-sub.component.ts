@@ -64,7 +64,7 @@ export class ManageCompanySubComponent implements OnInit {
 
   ngOnInit() {
   }
-  url :any;
+  url:any ="assets/images/profile.png";
   onSelectFile(event) {
     if (event.target.files && event.target.files[0]) {
       var reader = new FileReader();
