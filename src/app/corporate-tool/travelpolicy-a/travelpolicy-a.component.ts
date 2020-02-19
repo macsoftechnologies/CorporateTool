@@ -16,7 +16,7 @@ export class TravelpolicyAComponent implements OnInit {
     this.toastr.success("Policy Name has been Created")
   }
   update(){
-    this.toastr.success("Updateed Successfully")
+    this.toastr.success("Updated Successfully")
   }
 
 }
