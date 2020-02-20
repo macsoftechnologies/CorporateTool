@@ -16,7 +16,7 @@ export class NavigationComponent implements AfterViewInit {
   constructor(private modalService: NgbModal) {}
 
   // This is for Notifications
-  notifications: Object[] = [
+  notifications = [
     {
       round: 'round-danger',
       icon: 'ti-link',
@@ -48,7 +48,7 @@ export class NavigationComponent implements AfterViewInit {
   ];
 
   // This is for Mymessages
-  mymessages: Object[] = [
+  mymessages = [
     {
       useravatar: 'assets/images/users/1.jpg',
       status: 'online',

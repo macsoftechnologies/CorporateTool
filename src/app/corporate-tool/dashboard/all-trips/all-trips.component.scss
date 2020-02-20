@@ -1,0 +1,13 @@
+.table th{
+    border: 1px solid #f3f1f1;
+}
+@media (max-width:768px) {
+    ::ng-deep {
+        .container-fluid {
+            padding: 0 15px 25px;
+        }
+        body{
+            font-size: 12px;
+        }
+    }
+}

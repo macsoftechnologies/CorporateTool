@@ -27,6 +27,7 @@ import { FeedsComponent } from './dashboard-components/feeds/feeds.component';
 import { EarningComponent } from './dashboard-components/earning-report/earning-report.component';
 import { ActivityComponent } from './dashboard-components/activity-timeline/activity.component';
 
+
 @NgModule({
   imports: [
     FormsModule,
@@ -55,7 +56,8 @@ import { ActivityComponent } from './dashboard-components/activity-timeline/acti
     TotalEarningComponent,
     FeedsComponent,
     EarningComponent,
-    ActivityComponent
+    ActivityComponent,
+    
   ]
 })
 export class DashboardModule {}

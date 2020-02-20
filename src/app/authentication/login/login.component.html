@@ -23,11 +23,11 @@
         </div>
         <div class="form-group text-center m-t-20">
           <div class="col-xs-12">
-            <a class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" [routerLink]="['/corporateTool/manageCompanysub']"
+            <a class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" [routerLink]="['/corporateTool/allTrips']"
               (click)="onLoggedin()">Log In</a>
           </div>
         </div>
-        <div class="row">
+        <div class="row d-none" >
           <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
             <div class="social">
               <a href="javascript:void(0)" class="btn btn-facebook" placement="top" ngbTooltip="Login with Facebook">
@@ -39,7 +39,7 @@
             </div>
           </div>
         </div>
-        <div class="form-group m-b-0">
+        <div class="form-group m-b-0 mt-5">
           <div class="col-sm-12 text-center">
             <div>Don't have an account?
               <a class="text-info m-l-5" [routerLink]="['/authentication/signup']">

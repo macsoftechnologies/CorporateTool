@@ -11,10 +11,117 @@ export const ROUTES: RouteInfo[] = [
     extralink: true,
     submenu: []
   }, */
+  
   {
     path: '',
-    title: 'CorporateTool',
+    title: 'Dashboard',
     icon: 'mdi mdi-gauge',
+    class: 'has-arrow',
+    label: '',
+    labelClass: 'label label-rouded label-themecolor',
+    extralink: false,
+    submenu: [
+      {
+        path: '/corporateTool/allTrips',
+        title: 'All Trips',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/corporateTool/pendingApprovals',
+        title: 'Pending Approvals',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/corporateTool/approved',
+        title: 'Approved',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/corporateTool/declined',
+        title: 'Declined',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/corporateTool/cancelled',
+        title: 'Cancelled',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/corporateTool/rejected',
+        title: 'Rejected',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      },
+      {
+        path: '/corporateTool/skipped',
+        title: 'Skipped',
+        icon: '',
+        class: '',
+        label: '',
+        labelClass: '',
+        extralink: false,
+        submenu: []
+      }
+
+    ]
+  },
+  {
+    path: '',
+    title: 'Book A Trip',
+    icon: 'mdi mdi-airplane-takeoff',
+    class: 'has-arrow',
+    label: '',
+    labelClass: 'label label-rouded label-themecolor',
+    extralink: false,
+    submenu: [
+      
+    ]
+  },
+  {
+    path: '',
+    title: 'transactions',
+    icon: 'mdi mdi-transfer',
+    class: 'has-arrow',
+    label: '',
+    labelClass: 'label label-rouded label-themecolor',
+    extralink: false,
+    submenu: [
+      
+    ]
+  },
+  {
+    path: '',
+    title: 'Settings',
+    icon: 'mdi mdi-settings',
     class: 'has-arrow',
     label: '',
     labelClass: 'label label-rouded label-themecolor',
@@ -232,6 +339,7 @@ export const ROUTES: RouteInfo[] = [
       
     ]
   },
+
   /* {
     path: '',
     title: 'Dashboards',

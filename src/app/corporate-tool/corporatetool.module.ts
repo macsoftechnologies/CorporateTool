@@ -25,6 +25,13 @@ import { MasterManageTeamsComponent } from './master-manage-teams/master-manage-
 import { MasterManageBandsComponent } from './master-manage-bands/master-manage-bands.component';
 import { CompanyPreferencesComponent } from './company-preferences/company-preferences.component';
 import { ToastrModule} from 'ngx-toastr';
+import { AllTripsComponent } from './dashboard/all-trips/all-trips.component';
+import { PendingApprovalsComponent } from './dashboard/pending-approvals/pending-approvals.component';
+import { ApprovedComponent } from './dashboard/approved/approved.component';
+import { DeclinedComponent } from './dashboard/declined/declined.component';
+import { CancelledComponent } from './dashboard/cancelled/cancelled.component';
+import { RejectedComponent } from './dashboard/rejected/rejected.component';
+import { SkippedComponent } from './dashboard/skipped/skipped.component';
 // import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -40,7 +47,7 @@ import { ToastrModule} from 'ngx-toastr';
     ToastrModule.forRoot()
     // BrowserAnimationsModule
 ],
-declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent, ManagePersonalDetailsComponent, ManagePreferencesComponent, ManageEmploymentComponent, ManagePassportDetailsComponent, ManageLoyaltyMembershipsComponent, TravelPolicyComponent, ManageCompanySubComponent, ManageBranchComponent, MasterManageDepartmentComponent, MasterManageGradesComponent, MasterManageDesignationsComponent, MasterManageTeamsComponent, MasterManageBandsComponent, CompanyPreferencesComponent]
+declarations: [ManageCompanyComponent, MasterComponent, ManageEmployeesComponent, PermissionsComponent, AdminpermissionsComponent, TravelpolicyAComponent, ManagePersonalDetailsComponent, ManagePreferencesComponent, ManageEmploymentComponent, ManagePassportDetailsComponent, ManageLoyaltyMembershipsComponent, TravelPolicyComponent, ManageCompanySubComponent, ManageBranchComponent, MasterManageDepartmentComponent, MasterManageGradesComponent, MasterManageDesignationsComponent, MasterManageTeamsComponent, MasterManageBandsComponent, CompanyPreferencesComponent, AllTripsComponent, PendingApprovalsComponent, ApprovedComponent, DeclinedComponent, CancelledComponent, RejectedComponent, SkippedComponent]
 })
 
 export class CorporateToolModule {

@@ -23,6 +23,7 @@
                 </span>
             </a>
         </div>
+        
         <!-- ============================================================== -->
         <!-- End Logo -->
         <!-- ============================================================== -->
@@ -40,7 +41,7 @@
                 <!-- ============================================================== -->
                 <!-- Comment -->
                 <!-- ============================================================== -->
-                <li class="nav-item dropdown" ngbDropdown>
+                <!-- <li class="nav-item dropdown" ngbDropdown>
                     <a ngbDropdownToggle class="nav-link text-muted text-muted waves-effect waves-dark" href="javascript:void(0)">
                         <i class="mdi mdi-message"></i>
                         <div class="notify">
@@ -55,7 +56,7 @@
                             </li>
                             <li>
                                 <div class="message-center" [perfectScrollbar]="config">
-                                    <!-- Message -->
+                                    Message
                                     <a href="#" *ngFor="let notification of notifications">
                                         <div class="round {{notification.round}}">
                                             <i class="{{notification.icon}}"></i>
@@ -76,14 +77,14 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <!-- ============================================================== -->
                 <!-- End Comment -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <!-- Messages -->
                 <!-- ============================================================== -->
-                <li class="nav-item dropdown" ngbDropdown>
+                <!-- <li class="nav-item dropdown" ngbDropdown>
                     <a ngbDropdownToggle class="nav-link text-muted waves-effect waves-dark" href="javascript:void(0)">
                         <i class="mdi mdi-email"></i>
                         <div class="notify">
@@ -119,23 +120,23 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <!-- ============================================================== -->
                 <!-- End Messages -->
                 <!-- ============================================================== -->
                 <!-- ============================================================== -->
                 <!-- Messages -->
                 <!-- ============================================================== -->
-                <li class="nav-item dropdown mega-dropdown" ngbDropdown [autoClose]="false">
+                <!-- <li class="nav-item dropdown mega-dropdown" ngbDropdown [autoClose]="false">
                     <a ngbDropdownToggle class="nav-link text-muted waves-effect waves-dark" href="javascript:void(0)">
                         <i class="mdi mdi-view-grid"></i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right animated bounceInDown" ngbDropdownMenu>
                         <ul class="mega-dropdown-menu row">
                             <li class="col-lg-3 col-xlg-2 m-b-30">
-                                <h4 class="m-b-20">CAROUSEL</h4>
+                                <h4 class="m-b-20">CAROUSEL</h4> -->
                                 <!-- CAROUSEL -->
-                                <ngb-carousel>
+                                <!-- <ngb-carousel>
                                     <ng-template ngbSlide>
                                         <img src="assets/images/big/img1.jpg" class="img-responsive" alt="Random first slide">
                                         <div class="carousel-caption">
@@ -157,14 +158,14 @@
 
                                         </div>
                                     </ng-template>
-                                </ngb-carousel>
+                                </ngb-carousel> -->
                                 <!-- End CAROUSEL -->
 
-                            </li>
+                            <!-- </li>
                             <li class="col-lg-3 m-b-30">
-                                <h4 class="m-b-20">ACCORDION</h4>
+                                <h4 class="m-b-20">ACCORDION</h4> -->
                                 <!-- Accordian -->
-                                <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
+                                <!-- <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" class="accordion nav-accordion">
                                     <ngb-panel title="Simple">
                                         <ng-template ngbPanelContent>
                                             Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid.
@@ -189,9 +190,9 @@
 
 
                             <li class="col-lg-3  m-b-30">
-                                <h4 class="m-b-20">CONTACT US</h4>
+                                <h4 class="m-b-20">CONTACT US</h4> -->
                                 <!-- Contact -->
-                                <form>
+                                <!-- <form>
                                     <div class="form-group">
                                         <input type="text" class="form-control" id="exampleInputname1" placeholder="Enter Name"> </div>
                                     <div class="form-group">
@@ -203,9 +204,9 @@
                                 </form>
                             </li>
                             <li class="col-lg-3 col-xlg-4 m-b-30">
-                                <h4 class="m-b-20">List style</h4>
+                                <h4 class="m-b-20">List style</h4> -->
                                 <!-- List style -->
-                                <ul class="list-style-none">
+                                <!-- <ul class="list-style-none">
                                     <li>
                                         <a href="javascript:void(0)">
                                             <i class="fa fa-check text-success"></i> You can give link</a>
@@ -230,7 +231,7 @@
                             </li>
                         </ul>
                     </div>
-                </li>
+                </li> -->
                 <!-- ============================================================== -->
                 <!-- End Messages -->
                 <!-- ============================================================== -->
@@ -238,7 +239,7 @@
             <!-- ============================================================== -->
             <!-- User profile and search -->
             <!-- ============================================================== -->
-            <ul class="navbar-nav my-lg-0">
+            <ul class="navbar-nav my-lg-0 d-none">
                 <!-- ============================================================== -->
                 <!-- Search -->
                 <!-- ============================================================== -->
@@ -276,6 +277,7 @@
                                 </div>
                             </li>
                             <li role="separator" class="divider"></li>
+                            
                             <li>
                                 <a href="#">
                                     <i class="ti-user"></i> My Profile</a>

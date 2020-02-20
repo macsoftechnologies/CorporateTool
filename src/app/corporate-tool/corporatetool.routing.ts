@@ -19,8 +19,69 @@ import { MasterManageDesignationsComponent } from './master-manage-designations/
 import { MasterManageTeamsComponent } from './master-manage-teams/master-manage-teams.component';
 import { MasterManageBandsComponent } from './master-manage-bands/master-manage-bands.component';
 import { CompanyPreferencesComponent } from './company-preferences/company-preferences.component';
+import { AllTripsComponent } from './dashboard/all-trips/all-trips.component';
+import { PendingApprovalsComponent } from './dashboard/pending-approvals/pending-approvals.component';
+import { ApprovedComponent } from './dashboard/approved/approved.component';
+import { DeclinedComponent } from './dashboard/declined/declined.component';
+import { CancelledComponent } from './dashboard/cancelled/cancelled.component';
+import { RejectedComponent } from './dashboard/rejected/rejected.component';
+import { SkippedComponent } from './dashboard/skipped/skipped.component';
 
 export const corporateToolRoutes: Routes = [
+  {
+    path: '',
+    children: [
+      {
+        path: 'allTrips',
+        component: AllTripsComponent,
+        data: {
+          title: 'All Trips',
+        }
+      },
+      {
+        path: 'pendingApprovals',
+        component: PendingApprovalsComponent,
+        data: {
+          title: 'Pending Approvals',
+        }
+      },
+      {
+        path: 'approved',
+        component: ApprovedComponent,
+        data: {
+          title: 'Approved',
+        }
+      },
+      {
+        path: 'declined',
+        component: DeclinedComponent,
+        data: {
+          title: 'Declined',
+        }
+      },
+      {
+        path: 'cancelled',
+        component: CancelledComponent,
+        data: {
+          title: 'Cancelled',
+        }
+      },
+      {
+        path: 'rejected',
+        component: RejectedComponent,
+        data: {
+          title: 'Rejected',
+        }
+      },
+      {
+        path: 'skipped',
+        component: SkippedComponent,
+        data: {
+          title: 'Skipped',
+        }
+      },
+    ]
+  },
     {
         path: '',
         children: [
