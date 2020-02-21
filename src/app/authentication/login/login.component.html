@@ -1,16 +1,36 @@
 <div class="login-register" style="background-image:url(assets/images/background/login-register.jpg);">
   <div class="login-box card">
     <div class="card-body">
-      <form class="form-horizontal form-material" id="loginform">
+      <form [formGroup]="loginform" (ngSubmit)="onSubmit()" class="form-horizontal form-material">
         <h3 class="box-title m-b-20">Sign In</h3>
         <div class="form-group ">
           <div class="col-xs-12">
-            <input class="form-control" type="text" required="" placeholder="Username"> </div>
-        </div>
+            <input class="form-control" type="text" formControlName="username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" required placeholder="Username"> 
+          </div>
+              <div *ngIf="submitted && f.username.errors" class="text-danger">
+                <div *ngIf="f.username.errors.required">Please enter your username</div>
+              </div>
+              <div *ngIf="submitted && !f.username.errors">
+                <div *ngIf="this.profile.username !==this.loginform.value.username" class="text-danger">please enter correct username</div>
+
+              </div>
+          </div>
+      
         <div class="form-group">
           <div class="col-xs-12">
-            <input class="form-control" type="password" required="" placeholder="Password"> </div>
+            <input class="form-control" type="password" formControlName="password" placeholder="Password" required>
+
+          </div>
+          <div *ngIf="submitted && !f.password.errors">
+            <div *ngIf="this.profile.password !==this.loginform.value.password" class="text-danger">please enter correct password</div>
+          </div>
+
+           <div *ngIf="submitted && f.password.errors" class="text-danger">
+            <div *ngIf="submitted && f.password.errors.required">Please enter your Password</div>
+           <div *ngIf="this.profile.password !== this.loginform.value.password"></div>
+          </div>
         </div>
+        
         <div class="form-group row">
           <div class="col-md-12 font-14">
             <div class="checkbox checkbox-primary pull-left p-t-0">
@@ -18,14 +38,16 @@
               <label for="checkbox-signup"> Remember me </label>
             </div>
             <a href="javascript:void(0)" id="to-recover" class="text-dark pull-right">
-              <!-- <i class="fa fa-lock m-r-5"></i> -->Forgot pwd?</a>
+              <i class="fa fa-lock m-r-5"></i>Forgot pwd?</a>
           </div>
         </div>
         <div class="form-group text-center m-t-20">
           <div class="col-xs-12">
-            <a class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" [routerLink]="['/corporateTool/allTrips']"
-              (click)="onLoggedin()">Log In</a>
+            <!-- <a type="submit" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" [routerLink]="['/corporateTool/allTrips']"
+              >Log In</a> -->
+              <input type="submit" class="btn btn-info btn-lg btn-block text-uppercase waves-effect waves-light" value="Log In">
           </div>
+          
         </div>
         <div class="row d-none" >
           <div class="col-xs-12 col-sm-12 col-md-12 m-t-10 text-center">
