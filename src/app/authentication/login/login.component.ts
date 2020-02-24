@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit, AfterViewInit {
   ngOnInit() {
    
   }
-  profile={username:"i2space",password:"i2space@"}
+  profile={username:"i2space",password:"ctool"}
 
   get f(){ return this.loginform.controls}
   
